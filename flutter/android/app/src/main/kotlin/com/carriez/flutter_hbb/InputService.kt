@@ -1,4 +1,4 @@
-package com.carriez.flutter_hbb
+package com.carriez.naive_rust_desk
 
 /**
  * Handle remote input and dispatch android gesture

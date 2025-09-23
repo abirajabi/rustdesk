@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/models/state_model.dart';
-import 'package:flutter_hbb/desktop/pages/file_manager_page.dart';
-import 'package:flutter_hbb/desktop/widgets/tabbar_widget.dart';
-import 'package:flutter_hbb/utils/multi_window_manager.dart';
+import 'package:naive_rust_desk/common.dart';
+import 'package:naive_rust_desk/consts.dart';
+import 'package:naive_rust_desk/models/state_model.dart';
+import 'package:naive_rust_desk/desktop/pages/file_manager_page.dart';
+import 'package:naive_rust_desk/desktop/widgets/tabbar_widget.dart';
+import 'package:naive_rust_desk/utils/multi_window_manager.dart';
 import 'package:get/get.dart';
 
 import '../../models/platform_model.dart';

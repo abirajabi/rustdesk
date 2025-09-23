@@ -8,14 +8,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common/formatter/id_formatter.dart';
-import 'package:flutter_hbb/desktop/widgets/refresh_wrapper.dart';
-import 'package:flutter_hbb/desktop/widgets/tabbar_widget.dart';
-import 'package:flutter_hbb/main.dart';
-import 'package:flutter_hbb/models/peer_model.dart';
-import 'package:flutter_hbb/models/state_model.dart';
-import 'package:flutter_hbb/utils/multi_window_manager.dart';
-import 'package:flutter_hbb/utils/platform_channel.dart';
+import 'package:naive_rust_desk/common/formatter/id_formatter.dart';
+import 'package:naive_rust_desk/desktop/widgets/refresh_wrapper.dart';
+import 'package:naive_rust_desk/desktop/widgets/tabbar_widget.dart';
+import 'package:naive_rust_desk/main.dart';
+import 'package:naive_rust_desk/models/peer_model.dart';
+import 'package:naive_rust_desk/models/state_model.dart';
+import 'package:naive_rust_desk/utils/multi_window_manager.dart';
+import 'package:naive_rust_desk/utils/platform_channel.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -34,14 +34,14 @@ import 'mobile/pages/terminal_page.dart';
 import 'desktop/pages/remote_page.dart' as desktop_remote;
 import 'desktop/pages/file_manager_page.dart' as desktop_file_manager;
 import 'desktop/pages/view_camera_page.dart' as desktop_view_camera;
-import 'package:flutter_hbb/desktop/widgets/remote_toolbar.dart';
+import 'package:naive_rust_desk/desktop/widgets/remote_toolbar.dart';
 import 'models/model.dart';
 import 'models/platform_model.dart';
 
-import 'package:flutter_hbb/native/win32.dart'
-    if (dart.library.html) 'package:flutter_hbb/web/win32.dart';
-import 'package:flutter_hbb/native/common.dart'
-    if (dart.library.html) 'package:flutter_hbb/web/common.dart';
+import 'package:naive_rust_desk/native/win32.dart'
+    if (dart.library.html) 'package:naive_rust_desk/web/win32.dart';
+import 'package:naive_rust_desk/native/common.dart'
+    if (dart.library.html) 'package:naive_rust_desk/web/common.dart';
 import 'package:http/http.dart' as http;
 
 final globalKey = GlobalKey<NavigatorState>();

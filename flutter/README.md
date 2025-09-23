@@ -1,4 +1,4 @@
-# flutter_hbb
+# naive_rust_desk
 
 A new Flutter project.
 

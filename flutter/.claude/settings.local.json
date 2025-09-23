@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/macbook/Data/Work/Freelance/rustdesk/res/**)",
+      "Bash(rsvg-convert:*)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(magick:*)",
+      "Bash(iconutil:*)",
+      "Bash(flutter pub:*)",
+      "Read(//Users/macbook/Data/Work/Freelance/rustdesk/**)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

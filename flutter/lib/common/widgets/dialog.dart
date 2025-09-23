@@ -4,12 +4,12 @@ import 'dart:convert';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common/shared_state.dart';
-import 'package:flutter_hbb/common/widgets/setting_widgets.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/models/peer_model.dart';
-import 'package:flutter_hbb/models/peer_tab_model.dart';
-import 'package:flutter_hbb/models/state_model.dart';
+import 'package:naive_rust_desk/common/shared_state.dart';
+import 'package:naive_rust_desk/common/widgets/setting_widgets.dart';
+import 'package:naive_rust_desk/consts.dart';
+import 'package:naive_rust_desk/models/peer_model.dart';
+import 'package:naive_rust_desk/models/peer_tab_model.dart';
+import 'package:naive_rust_desk/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 

@@ -3,13 +3,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/common/shared_state.dart';
-import 'package:flutter_hbb/common/widgets/dialog.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/desktop/widgets/remote_toolbar.dart';
-import 'package:flutter_hbb/models/model.dart';
-import 'package:flutter_hbb/models/platform_model.dart';
+import 'package:naive_rust_desk/common.dart';
+import 'package:naive_rust_desk/common/shared_state.dart';
+import 'package:naive_rust_desk/common/widgets/dialog.dart';
+import 'package:naive_rust_desk/consts.dart';
+import 'package:naive_rust_desk/desktop/widgets/remote_toolbar.dart';
+import 'package:naive_rust_desk/models/model.dart';
+import 'package:naive_rust_desk/models/platform_model.dart';
 import 'package:get/get.dart';
 
 bool isEditOsPassword = false;

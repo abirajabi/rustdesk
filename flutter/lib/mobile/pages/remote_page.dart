@@ -3,11 +3,11 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common/shared_state.dart';
-import 'package:flutter_hbb/common/widgets/toolbar.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/mobile/widgets/gesture_help.dart';
-import 'package:flutter_hbb/models/chat_model.dart';
+import 'package:naive_rust_desk/common/shared_state.dart';
+import 'package:naive_rust_desk/common/widgets/toolbar.dart';
+import 'package:naive_rust_desk/consts.dart';
+import 'package:naive_rust_desk/mobile/widgets/gesture_help.dart';
+import 'package:naive_rust_desk/models/chat_model.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/models/platform_model.dart';
+import 'package:naive_rust_desk/common.dart';
+import 'package:naive_rust_desk/models/platform_model.dart';
 
 const _kSystemSound = 'System Sound';
 

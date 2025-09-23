@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
-import 'package:flutter_hbb/models/state_model.dart';
+import 'package:naive_rust_desk/models/state_model.dart';
 
 import '../../consts.dart';
 import '../../common/widgets/overlay.dart';
@@ -22,8 +22,8 @@ import '../widgets/remote_toolbar.dart';
 import '../widgets/kb_layout_type_chooser.dart';
 import '../widgets/tabbar_widget.dart';
 
-import 'package:flutter_hbb/native/custom_cursor.dart'
-    if (dart.library.html) 'package:flutter_hbb/web/custom_cursor.dart';
+import 'package:naive_rust_desk/native/custom_cursor.dart'
+    if (dart.library.html) 'package:naive_rust_desk/web/custom_cursor.dart';
 
 final SimpleWrapper<bool> _firstEnterImage = SimpleWrapper(false);
 

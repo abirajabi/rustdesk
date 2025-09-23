@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/models/state_model.dart';
+import 'package:naive_rust_desk/common.dart';
+import 'package:naive_rust_desk/models/state_model.dart';
 import 'package:get/get.dart';
 
 const int kMaxVirtualDisplayCount = 4;
