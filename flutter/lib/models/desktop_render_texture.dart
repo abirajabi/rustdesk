@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gpu_texture_renderer/flutter_gpu_texture_renderer.dart';
-import 'package:naive_rust_desk/common/shared_state.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/models/model.dart';
+import 'package:rconnect/common/shared_state.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/models/model.dart';
 import 'package:get/get.dart';
 
 import '../../common.dart';
 import './platform_model.dart';
 
 import 'package:texture_rgba_renderer/texture_rgba_renderer.dart'
-    if (dart.library.html) 'package:naive_rust_desk/web/texture_rgba_renderer.dart';
+    if (dart.library.html) 'package:rconnect/web/texture_rgba_renderer.dart';
 
 class _PixelbufferTexture {
   int _textureKey = -1;

@@ -1,4 +1,4 @@
-package com.carriez.naive_rust_desk
+package com.carriez.rconnect
 
 /**
  * Handle events from flutter

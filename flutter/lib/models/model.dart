@@ -9,26 +9,26 @@ import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:naive_rust_desk/common/widgets/peers_view.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/models/ab_model.dart';
-import 'package:naive_rust_desk/models/chat_model.dart';
-import 'package:naive_rust_desk/models/cm_file_model.dart';
-import 'package:naive_rust_desk/models/file_model.dart';
-import 'package:naive_rust_desk/models/group_model.dart';
-import 'package:naive_rust_desk/models/peer_model.dart';
-import 'package:naive_rust_desk/models/peer_tab_model.dart';
-import 'package:naive_rust_desk/models/printer_model.dart';
-import 'package:naive_rust_desk/models/server_model.dart';
-import 'package:naive_rust_desk/models/user_model.dart';
-import 'package:naive_rust_desk/models/state_model.dart';
-import 'package:naive_rust_desk/models/desktop_render_texture.dart';
-import 'package:naive_rust_desk/models/terminal_model.dart';
-import 'package:naive_rust_desk/plugin/event.dart';
-import 'package:naive_rust_desk/plugin/manager.dart';
-import 'package:naive_rust_desk/plugin/widgets/desc_ui.dart';
-import 'package:naive_rust_desk/common/shared_state.dart';
-import 'package:naive_rust_desk/utils/multi_window_manager.dart';
+import 'package:rconnect/common/widgets/peers_view.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/models/ab_model.dart';
+import 'package:rconnect/models/chat_model.dart';
+import 'package:rconnect/models/cm_file_model.dart';
+import 'package:rconnect/models/file_model.dart';
+import 'package:rconnect/models/group_model.dart';
+import 'package:rconnect/models/peer_model.dart';
+import 'package:rconnect/models/peer_tab_model.dart';
+import 'package:rconnect/models/printer_model.dart';
+import 'package:rconnect/models/server_model.dart';
+import 'package:rconnect/models/user_model.dart';
+import 'package:rconnect/models/state_model.dart';
+import 'package:rconnect/models/desktop_render_texture.dart';
+import 'package:rconnect/models/terminal_model.dart';
+import 'package:rconnect/plugin/event.dart';
+import 'package:rconnect/plugin/manager.dart';
+import 'package:rconnect/plugin/widgets/desc_ui.dart';
+import 'package:rconnect/common/shared_state.dart';
+import 'package:rconnect/utils/multi_window_manager.dart';
 import 'package:tuple/tuple.dart';
 import 'package:image/image.dart' as img2;
 import 'package:flutter_svg/flutter_svg.dart';
@@ -43,10 +43,10 @@ import '../common/widgets/dialog.dart';
 import 'input_model.dart';
 import 'platform_model.dart';
 
-import 'package:naive_rust_desk/generated_bridge.dart'
-    if (dart.library.html) 'package:naive_rust_desk/web/bridge.dart';
-import 'package:naive_rust_desk/native/custom_cursor.dart'
-    if (dart.library.html) 'package:naive_rust_desk/web/custom_cursor.dart';
+import 'package:rconnect/generated_bridge.dart'
+    if (dart.library.html) 'package:rconnect/web/bridge.dart';
+import 'package:rconnect/native/custom_cursor.dart'
+    if (dart.library.html) 'package:rconnect/web/custom_cursor.dart';
 
 typedef HandleMsgBox = Function(Map<String, dynamic> evt, String id);
 typedef ReconnectHandle = Function(OverlayDialogManager, SessionID, bool);

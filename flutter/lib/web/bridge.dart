@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
 import 'dart:html' as html;
 
-import 'package:naive_rust_desk/consts.dart';
+import 'package:rconnect/consts.dart';
 
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
@@ -812,7 +812,7 @@ class RustdeskImpl {
   }
 
   String mainGetAppNameSync({dynamic hint}) {
-    return 'RustDesk';
+    return 'R-connect';
   }
 
   String mainUriPrefixSync({dynamic hint}) {

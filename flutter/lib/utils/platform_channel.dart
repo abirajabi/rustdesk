@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:naive_rust_desk/main.dart';
-import 'package:naive_rust_desk/common.dart';
+import 'package:rconnect/main.dart';
+import 'package:rconnect/common.dart';
 
 enum SystemWindowTheme { light, dark }
 

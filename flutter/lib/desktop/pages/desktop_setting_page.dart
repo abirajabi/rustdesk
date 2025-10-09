@@ -5,19 +5,19 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/common/widgets/audio_input.dart';
-import 'package:naive_rust_desk/common/widgets/setting_widgets.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/desktop/pages/desktop_home_page.dart';
-import 'package:naive_rust_desk/desktop/pages/desktop_tab_page.dart';
-import 'package:naive_rust_desk/mobile/widgets/dialog.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
-import 'package:naive_rust_desk/models/printer_model.dart';
-import 'package:naive_rust_desk/models/server_model.dart';
-import 'package:naive_rust_desk/models/state_model.dart';
-import 'package:naive_rust_desk/plugin/manager.dart';
-import 'package:naive_rust_desk/plugin/widgets/desktop_settings.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/common/widgets/audio_input.dart';
+import 'package:rconnect/common/widgets/setting_widgets.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/desktop/pages/desktop_home_page.dart';
+import 'package:rconnect/desktop/pages/desktop_tab_page.dart';
+import 'package:rconnect/mobile/widgets/dialog.dart';
+import 'package:rconnect/models/platform_model.dart';
+import 'package:rconnect/models/printer_model.dart';
+import 'package:rconnect/models/server_model.dart';
+import 'package:rconnect/models/state_model.dart';
+import 'package:rconnect/plugin/manager.dart';
+import 'package:rconnect/plugin/widgets/desktop_settings.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -2204,7 +2204,7 @@ class _AboutState extends State<_About> {
       final scrollController = ScrollController();
       return SingleChildScrollView(
         controller: scrollController,
-        child: _Card(title: translate('About RustDesk'), children: [
+        child: _Card(title: translate('About R-connect'), children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

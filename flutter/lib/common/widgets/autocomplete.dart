@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common/formatter/id_formatter.dart';
+import 'package:rconnect/common/formatter/id_formatter.dart';
 import '../../../models/platform_model.dart';
-import 'package:naive_rust_desk/models/peer_model.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/common/widgets/peer_card.dart';
+import 'package:rconnect/models/peer_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/common/widgets/peer_card.dart';
 
 class AllPeersLoader {
   List<Peer> peers = [];

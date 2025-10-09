@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/desktop/pages/server_page.dart';
-import 'package:naive_rust_desk/desktop/widgets/tabbar_widget.dart';
-import 'package:naive_rust_desk/main.dart';
-import 'package:naive_rust_desk/models/server_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/desktop/pages/server_page.dart';
+import 'package:rconnect/desktop/widgets/tabbar_widget.dart';
+import 'package:rconnect/main.dart';
+import 'package:rconnect/models/server_model.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:window_manager/window_manager.dart';

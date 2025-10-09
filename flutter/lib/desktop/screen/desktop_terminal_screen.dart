@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
+import 'package:rconnect/common.dart';
 import 'package:provider/provider.dart';
 
-import 'package:naive_rust_desk/desktop/pages/terminal_tab_page.dart';
+import 'package:rconnect/desktop/pages/terminal_tab_page.dart';
 
 class DesktopTerminalScreen extends StatelessWidget {
   final Map<String, dynamic> params;

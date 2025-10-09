@@ -3,8 +3,8 @@ import 'dart:convert';
 
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common/hbbs/hbbs.dart';
-import 'package:naive_rust_desk/models/ab_model.dart';
+import 'package:rconnect/common/hbbs/hbbs.dart';
+import 'package:rconnect/models/ab_model.dart';
 import 'package:get/get.dart';
 
 import '../common.dart';

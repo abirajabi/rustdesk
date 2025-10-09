@@ -6,13 +6,13 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart' hide TabBarTheme;
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/desktop/pages/remote_page.dart';
-import 'package:naive_rust_desk/desktop/pages/view_camera_page.dart';
-import 'package:naive_rust_desk/main.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
-import 'package:naive_rust_desk/models/state_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/desktop/pages/remote_page.dart';
+import 'package:rconnect/desktop/pages/view_camera_page.dart';
+import 'package:rconnect/main.dart';
+import 'package:rconnect/models/platform_model.dart';
+import 'package:rconnect/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/src/rx_workers/utils/debouncer.dart';
 import 'package:scroll_pos/scroll_pos.dart';
@@ -635,7 +635,7 @@ class _DesktopTabState extends State<DesktopTab>
                         Offstage(
                             offstage: !showTitle,
                             child: const Text(
-                              "RustDesk",
+                              "R-connect",
                               style: TextStyle(fontSize: 13),
                             ).marginOnly(left: 2))
                       ]).marginOnly(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
-import 'package:naive_rust_desk/plugin/model.dart';
-import 'package:naive_rust_desk/plugin/common.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/models/platform_model.dart';
+import 'package:rconnect/plugin/model.dart';
+import 'package:rconnect/plugin/common.dart';
 import 'package:get/get.dart';
 
 import '../manager.dart';

@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common/widgets/setting_widgets.dart';
-import 'package:naive_rust_desk/common/widgets/toolbar.dart';
+import 'package:rconnect/common/widgets/setting_widgets.dart';
+import 'package:rconnect/common/widgets/toolbar.dart';
 import 'package:get/get.dart';
 
 import '../../common.dart';

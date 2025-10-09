@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/main.dart';
-import 'package:naive_rust_desk/mobile/pages/settings_page.dart';
-import 'package:naive_rust_desk/models/chat_model.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/main.dart';
+import 'package:rconnect/mobile/pages/settings_page.dart';
+import 'package:rconnect/models/chat_model.dart';
+import 'package:rconnect/models/platform_model.dart';
 import 'package:get/get.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:window_manager/window_manager.dart';

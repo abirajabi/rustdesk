@@ -1,6 +1,6 @@
 import 'dart:js' as js;
 // cycle imports, maybe we can improve this
-import 'package:naive_rust_desk/consts.dart';
+import 'package:rconnect/consts.dart';
 
 final isAndroid_ = false;
 final isIOS_ = false;

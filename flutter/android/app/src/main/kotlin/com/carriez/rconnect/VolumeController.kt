@@ -1,4 +1,4 @@
-package com.carriez.naive_rust_desk
+package com.carriez.rconnect
 
 // Inspired by https://github.com/yosemiteyss/flutter_volume_controller/blob/main/android/src/main/kotlin/com/yosemiteyss/flutter_volume_controller/VolumeController.kt
 

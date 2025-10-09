@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Script to build F-Droid release of RustDesk
+# Script to build F-Droid release of R-connect
 #
 # Copyright (C) 2024, The RustDesk Authors
 #               2024, Vasyl Gello <vasek.gello@gmail.com>
@@ -78,25 +78,25 @@ arm64-v8a)
 	FLUTTER_TARGET=android-arm64
 	NDK_TARGET=aarch64-linux-android
 	RUST_TARGET=aarch64-linux-android
-	RUSTDESK_FEATURES='flutter,hwcodec'
+	RCONNECT_FEATURES='flutter,hwcodec'
 	;;
 armeabi-v7a)
 	FLUTTER_TARGET=android-arm
 	NDK_TARGET=arm-linux-androideabi
 	RUST_TARGET=armv7-linux-androideabi
-	RUSTDESK_FEATURES='flutter,hwcodec'
+	RCONNECT_FEATURES='flutter,hwcodec'
 	;;
 x86_64)
 	FLUTTER_TARGET=android-x64
 	NDK_TARGET=x86_64-linux-android
 	RUST_TARGET=x86_64-linux-android
-	RUSTDESK_FEATURES='flutter'
+	RCONNECT_FEATURES='flutter'
 	;;
 x86)
 	FLUTTER_TARGET=android-x86
 	NDK_TARGET=i686-linux-android
 	RUST_TARGET=i686-linux-android
-	RUSTDESK_FEATURES='flutter'
+	RCONNECT_FEATURES='flutter'
 	;;
 *)
 	echo "ERROR: Unknown Android ABI '${ANDROID_ABI}'!" >&2
@@ -455,7 +455,7 @@ build)
 		--bindgen \
 		build \
 		--release \
-		--features "${RUSTDESK_FEATURES}"
+		--features "${RCONNECT_FEATURES}"
 
 	mkdir -p "flutter/android/app/src/main/jniLibs/${ANDROID_ABI}"
 

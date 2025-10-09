@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common/hbbs/hbbs.dart';
-import 'package:naive_rust_desk/common/widgets/peers_view.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/models/model.dart';
-import 'package:naive_rust_desk/models/peer_model.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
+import 'package:rconnect/common/hbbs/hbbs.dart';
+import 'package:rconnect/common/widgets/peers_view.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/models/model.dart';
+import 'package:rconnect/models/peer_model.dart';
+import 'package:rconnect/models/platform_model.dart';
 import 'package:get/get.dart';
 import 'package:bot_toast/bot_toast.dart';
 

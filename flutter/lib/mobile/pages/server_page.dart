@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:naive_rust_desk/desktop/pages/desktop_home_page.dart';
-import 'package:naive_rust_desk/mobile/widgets/dialog.dart';
-import 'package:naive_rust_desk/models/chat_model.dart';
+import 'package:rconnect/desktop/pages/desktop_home_page.dart';
+import 'package:rconnect/mobile/widgets/dialog.dart';
+import 'package:rconnect/models/chat_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 

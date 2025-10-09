@@ -4,10 +4,10 @@ project(runner LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "naiveRustdesk")
+set(BINARY_NAME "R-Connect")
 # The unique GTK application identifier for this application. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
-set(APPLICATION_ID "com.carriez.naive_rust_desk")
+set(APPLICATION_ID "com.carriez.rconnect")
 
 # Explicitly opt into modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
@@ -125,12 +125,12 @@ foreach(bundled_library ${PLUGIN_BUNDLED_LIBRARIES})
 endforeach(bundled_library)
 
 # flutter_rust_bridge
-set(RUSTDESK_LIB_BUILD_TYPE $<IF:$<CONFIG:Debug>,debug,release>)
-string(TOLOWER ${CMAKE_BUILD_TYPE} ${RUSTDESK_LIB_BUILD_TYPE})
-message(STATUS "rustdesk lib build type: ${RUSTDESK_LIB_BUILD_TYPE}")
+set(RCONNECT_LIB_BUILD_TYPE $<IF:$<CONFIG:Debug>,debug,release>)
+string(TOLOWER ${CMAKE_BUILD_TYPE} ${RCONNECT_LIB_BUILD_TYPE})
+message(STATUS "rconnect lib build type: ${RCONNECT_LIB_BUILD_TYPE}")
 
-set(RUSTDESK_LIB "../../target/${RUSTDESK_LIB_BUILD_TYPE}/liblibrustdesk.so")
-install(FILES "${RUSTDESK_LIB}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+set(RCONNECT_LIB "../../target/${RCONNECT_LIB_BUILD_TYPE}/liblibrustdesk.so")
+install(FILES "${RCONNECT_LIB}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
 COMPONENT Runtime RENAME librustdesk.so)
 
 # Fully re-copy the assets directory on each build to avoid having stale files

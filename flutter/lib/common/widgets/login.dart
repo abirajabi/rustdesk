@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common/hbbs/hbbs.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
-import 'package:naive_rust_desk/models/user_model.dart';
+import 'package:rconnect/common/hbbs/hbbs.dart';
+import 'package:rconnect/models/platform_model.dart';
+import 'package:rconnect/models/user_model.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';

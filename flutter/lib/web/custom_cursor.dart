@@ -4,7 +4,7 @@ import 'dart:js' as js;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import 'package:naive_rust_desk/models/model.dart' as model;
+import 'package:rconnect/models/model.dart' as model;
 
 class CursorData {
   final String key;

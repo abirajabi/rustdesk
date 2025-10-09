@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/models/model.dart';
-import 'package:naive_rust_desk/models/terminal_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/models/model.dart';
+import 'package:rconnect/models/terminal_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:xterm/xterm.dart';
 import '../../desktop/pages/terminal_connection_manager.dart';

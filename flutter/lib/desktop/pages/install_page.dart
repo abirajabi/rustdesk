@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/desktop/widgets/tabbar_widget.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
-import 'package:naive_rust_desk/models/state_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/desktop/widgets/tabbar_widget.dart';
+import 'package:rconnect/models/platform_model.dart';
+import 'package:rconnect/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:path/path.dart';
 import 'package:url_launcher/url_launcher_string.dart';

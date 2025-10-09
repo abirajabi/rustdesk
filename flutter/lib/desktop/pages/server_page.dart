@@ -4,12 +4,12 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common/widgets/audio_input.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/desktop/widgets/tabbar_widget.dart';
-import 'package:naive_rust_desk/models/chat_model.dart';
-import 'package:naive_rust_desk/models/cm_file_model.dart';
-import 'package:naive_rust_desk/utils/platform_channel.dart';
+import 'package:rconnect/common/widgets/audio_input.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/desktop/widgets/tabbar_widget.dart';
+import 'package:rconnect/models/chat_model.dart';
+import 'package:rconnect/models/cm_file_model.dart';
+import 'package:rconnect/utils/platform_channel.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:provider/provider.dart';

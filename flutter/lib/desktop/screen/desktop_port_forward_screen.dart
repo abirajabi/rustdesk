@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/desktop/pages/port_forward_tab_page.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/desktop/pages/port_forward_tab_page.dart';
 import 'package:provider/provider.dart';
 
 /// multi-tab file port forward screen

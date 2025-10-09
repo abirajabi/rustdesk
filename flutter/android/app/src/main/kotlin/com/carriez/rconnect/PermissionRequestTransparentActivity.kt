@@ -1,4 +1,4 @@
-package com.carriez.naive_rust_desk
+package com.carriez.rconnect
 
 import android.app.Activity
 import android.content.Intent

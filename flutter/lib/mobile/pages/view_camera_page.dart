@@ -3,10 +3,10 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:naive_rust_desk/common/shared_state.dart';
-import 'package:naive_rust_desk/common/widgets/toolbar.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/models/chat_model.dart';
+import 'package:rconnect/common/shared_state.dart';
+import 'package:rconnect/common/widgets/toolbar.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/models/chat_model.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

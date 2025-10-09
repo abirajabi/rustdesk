@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/mobile/pages/server_page.dart';
-import 'package:naive_rust_desk/mobile/pages/settings_page.dart';
-import 'package:naive_rust_desk/web/settings_page.dart';
+import 'package:rconnect/mobile/pages/server_page.dart';
+import 'package:rconnect/mobile/pages/settings_page.dart';
+import 'package:rconnect/web/settings_page.dart';
 import 'package:get/get.dart';
 import '../../common.dart';
 import '../../common/widgets/chat_page.dart';

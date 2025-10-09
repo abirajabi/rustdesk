@@ -13,7 +13,8 @@
       "Bash(echo $VCPKG_ROOT)",
       "Read(//Users/macbook/vcpkg/**)",
       "Bash(brew install:*)",
-      "Bash(./vcpkg install:*)"
+      "Bash(./vcpkg install:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

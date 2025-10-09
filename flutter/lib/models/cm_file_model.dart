@@ -2,9 +2,9 @@ import 'dart:collection';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/models/model.dart';
-import 'package:naive_rust_desk/models/server_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/models/model.dart';
+import 'package:rconnect/models/server_model.dart';
 import 'package:get/get.dart';
 import 'file_model.dart';
 

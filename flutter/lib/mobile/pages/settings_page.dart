@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common/widgets/setting_widgets.dart';
-import 'package:naive_rust_desk/desktop/pages/desktop_setting_page.dart';
+import 'package:rconnect/common/widgets/setting_widgets.dart';
+import 'package:rconnect/desktop/pages/desktop_setting_page.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:settings_ui/settings_ui.dart';
@@ -507,7 +507,7 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
               title: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(translate('Keep RustDesk background service')),
+                    Text(translate('Keep R-connect background service')),
                     Text('* ${translate('Ignore Battery Optimizations')}',
                         style: Theme.of(context).textTheme.bodySmall),
                   ]),
@@ -970,7 +970,7 @@ void showThemeSettings(OverlayDialogManager dialogManager) async {
 void showAbout(OverlayDialogManager dialogManager) {
   dialogManager.show((setState, close, context) {
     return CustomAlertDialog(
-      title: Text(translate('About RustDesk')),
+      title: Text(translate('About R-connect')),
       content: Wrap(direction: Axis.vertical, spacing: 12, children: [
         Text('Version: $version'),
         InkWell(

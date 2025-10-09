@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
+import 'package:rconnect/common.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class GestureIcons {

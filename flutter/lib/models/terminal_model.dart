@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/main.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/main.dart';
 import 'package:xterm/xterm.dart';
 
 import 'model.dart';

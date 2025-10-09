@@ -1,4 +1,4 @@
-package com.carriez.naive_rust_desk
+package com.carriez.rconnect
 
 import java.nio.ByteBuffer
 import java.util.Timer

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:naive_rust_desk/consts.dart';
+import 'package:rconnect/consts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
+import 'package:rconnect/models/platform_model.dart';
 
 import '../../common.dart';
 

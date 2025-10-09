@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/desktop/pages/view_camera_tab_page.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
-import 'package:naive_rust_desk/models/state_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/desktop/pages/view_camera_tab_page.dart';
+import 'package:rconnect/models/platform_model.dart';
+import 'package:rconnect/models/state_model.dart';
 import 'package:provider/provider.dart';
 
 /// multi-tab desktop remote screen

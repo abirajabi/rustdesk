@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:naive_rust_desk/common.dart';
-import 'package:naive_rust_desk/consts.dart';
-import 'package:naive_rust_desk/desktop/pages/desktop_home_page.dart';
-import 'package:naive_rust_desk/desktop/pages/desktop_setting_page.dart';
-import 'package:naive_rust_desk/desktop/widgets/tabbar_widget.dart';
-import 'package:naive_rust_desk/models/platform_model.dart';
-import 'package:naive_rust_desk/models/state_model.dart';
+import 'package:rconnect/common.dart';
+import 'package:rconnect/consts.dart';
+import 'package:rconnect/desktop/pages/desktop_home_page.dart';
+import 'package:rconnect/desktop/pages/desktop_setting_page.dart';
+import 'package:rconnect/desktop/widgets/tabbar_widget.dart';
+import 'package:rconnect/models/platform_model.dart';
+import 'package:rconnect/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:window_manager/window_manager.dart';
-// import 'package:flutter/services.dart';
 
 import '../../common/shared_state.dart';
 
