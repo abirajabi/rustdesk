@@ -1,5 +1,4 @@
 import 'dart:js' as js;
-import 'dart:html' as html;
 // cycle imports, maybe we can improve this
 import 'package:naive_rust_desk/consts.dart';
 

@@ -29,7 +29,6 @@ import 'package:naive_rust_desk/plugin/manager.dart';
 import 'package:naive_rust_desk/plugin/widgets/desc_ui.dart';
 import 'package:naive_rust_desk/common/shared_state.dart';
 import 'package:naive_rust_desk/utils/multi_window_manager.dart';
-import 'package:naive_rust_desk/web/bridge.dart';
 import 'package:tuple/tuple.dart';
 import 'package:image/image.dart' as img2;
 import 'package:flutter_svg/flutter_svg.dart';

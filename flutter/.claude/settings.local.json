@@ -9,7 +9,11 @@
       "Bash(flutter pub:*)",
       "Read(//Users/macbook/Data/Work/Freelance/rustdesk/**)",
       "Bash(cp:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(echo $VCPKG_ROOT)",
+      "Read(//Users/macbook/vcpkg/**)",
+      "Bash(brew install:*)",
+      "Bash(./vcpkg install:*)"
     ],
     "deny": [],
     "ask": []
