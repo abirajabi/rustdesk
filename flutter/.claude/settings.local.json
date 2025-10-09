@@ -20,7 +20,10 @@
       "Bash(python3:*)",
       "Bash(fvm flutter:*)",
       "Bash(fvm flutter pub get:*)",
-      "Bash(arch:*)"
+      "Bash(arch:*)",
+      "Bash(export:*)",
+      "Bash(export MACOSX_DEPLOYMENT_TARGET=10.14)",
+      "Bash(cargo:*)"
     ],
     "deny": [],
     "ask": []

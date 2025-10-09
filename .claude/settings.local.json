@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter pub run:*)",
+      "Bash(magick:*)",
+      "Bash(iconutil:*)",
+      "Bash(sips:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
