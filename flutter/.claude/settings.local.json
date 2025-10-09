@@ -14,7 +14,13 @@
       "Read(//Users/macbook/vcpkg/**)",
       "Bash(brew install:*)",
       "Bash(./vcpkg install:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(flutter clean:*)",
+      "Bash(rm:*)",
+      "Bash(python3:*)",
+      "Bash(fvm flutter:*)",
+      "Bash(fvm flutter pub get:*)",
+      "Bash(arch:*)"
     ],
     "deny": [],
     "ask": []

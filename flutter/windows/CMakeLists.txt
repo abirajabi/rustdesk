@@ -100,6 +100,7 @@ if(PLUGIN_BUNDLED_LIBRARIES)
     COMPONENT Runtime)
 endif()
 
+
 # flutter_rust_bridge
 set(RCONNECT_LIB_BUILD_TYPE $<IF:$<CONFIG:Debug>,debug,release>)
 message(STATUS "rconnect lib build type: ${RCONNECT_LIB_BUILD_TYPE}")
