@@ -165,28 +165,44 @@ open ios/Runner.xcworkspace
 
 ### 5. Code Signing and Notarization
 
-#### For Distribution (requires Apple Developer account)
+#### For Development (self-signed)
+After building, the app needs to be code-signed to run on macOS. For local development and testing, use an ad-hoc signature:
+
 ```bash
-# Sign the application
-codesign --sign "Developer ID Application: Your Name" --verbose flutter/build/macos/Build/Products/Release/NaiveRustDesk.app
+# Sign with ad-hoc signature (for local testing)
+codesign --sign - --force --deep flutter/build/macos/Build/Products/Release/R-connect.app
 
-# Create DMG
-hdiutil create -srcfolder flutter/build/macos/Build/Products/Release/NaiveRustDesk.app NaiveRustDesk.dmg
+# Verify the signature
+codesign --verify --verbose flutter/build/macos/Build/Products/Release/R-connect.app
 
-# Notarize with Apple (for distribution outside App Store)
-xcrun altool --notarize-app --primary-bundle-id "com.carriez.naive_rust_desk" --username "your-apple-id@example.com" --password "@keychain:Developer-altool" --file NaiveRustDesk.dmg
-
-# Check notarization status
-xcrun altool --notarization-history 0 --username "your-apple-id@example.com" --password "@keychain:Developer-altool"
-
-# Staple the notarization ticket
-xcrun stapler staple NaiveRustDesk.dmg
+# Check signature details
+codesign -dvv flutter/build/macos/Build/Products/Release/R-connect.app
 ```
 
-#### For Development (self-signed)
+**Note**: If you get "a sealed resource is missing or invalid" error, it means files were modified after signing. Re-run the codesign command above.
+
+#### For Distribution (requires Apple Developer account)
 ```bash
-# Create self-signed certificate (for local testing)
-codesign --sign - --force --deep flutter/build/macos/Build/Products/Release/NaiveRustDesk.app
+# Check available signing identities
+security find-identity -v -p codesigning
+
+# Sign the application with Developer ID
+codesign --sign "Developer ID Application: Your Name" --force --deep --verbose flutter/build/macos/Build/Products/Release/R-connect.app
+
+# Verify the signature
+codesign --verify --deep --strict --verbose=2 flutter/build/macos/Build/Products/Release/R-connect.app
+
+# Create DMG for distribution
+hdiutil create -srcfolder flutter/build/macos/Build/Products/Release/R-connect.app R-connect.dmg
+
+# Notarize with Apple (for distribution outside App Store)
+xcrun notarytool submit R-connect.dmg --apple-id "your-apple-id@example.com" --password "@keychain:Developer-altool" --team-id "YOUR_TEAM_ID" --wait
+
+# Staple the notarization ticket
+xcrun stapler staple R-connect.dmg
+
+# Verify notarization
+spctl --assess --type execute --verbose R-connect.app
 ```
 
 ### 6. Build Universal Binary (Intel + Apple Silicon)
@@ -206,8 +222,8 @@ lipo -create -output NaiveRustDesk-universal build/macos/Build/Products/Release-
 ## Build Outputs
 
 ### Desktop macOS
-- **App Bundle**: `flutter/build/macos/Build/Products/Release/NaiveRustDesk.app`
-- **Executable**: `flutter/build/macos/Build/Products/Release/NaiveRustDesk.app/Contents/MacOS/NaiveRustDesk`
+- **App Bundle**: `flutter/build/macos/Build/Products/Release/R-connect.app`
+- **Executable**: `flutter/build/macos/Build/Products/Release/R-connect.app/Contents/MacOS/R-connect`
 
 ### iOS
 - **iOS App**: `flutter/build/ios/iphoneos/Runner.app`
@@ -218,13 +234,13 @@ lipo -create -output NaiveRustDesk-universal build/macos/Build/Products/Release-
 ### Desktop macOS
 ```bash
 # Run from build directory
-open flutter/build/macos/Build/Products/Release/NaiveRustDesk.app
+open flutter/build/macos/Build/Products/Release/R-connect.app
 
 # Or run executable directly
-flutter/build/macos/Build/Products/Release/NaiveRustDesk.app/Contents/MacOS/NaiveRustDesk
+flutter/build/macos/Build/Products/Release/R-connect.app/Contents/MacOS/R-connect
 
 # Install to Applications folder
-cp -r flutter/build/macos/Build/Products/Release/NaiveRustDesk.app /Applications/
+cp -r flutter/build/macos/Build/Products/Release/R-connect.app /Applications/
 ```
 
 ### iOS
@@ -258,10 +274,13 @@ brew install portaudio cmake pkg-config
 security find-identity -v -p codesigning
 
 # Remove old signatures
-codesign --remove-signature flutter/build/macos/Build/Products/Release/NaiveRustDesk.app
+codesign --remove-signature flutter/build/macos/Build/Products/Release/R-connect.app
 
-# Re-sign with correct certificate
-codesign --sign "Your Certificate Name" --force --deep flutter/build/macos/Build/Products/Release/NaiveRustDesk.app
+# Re-sign with ad-hoc signature (for development)
+codesign --sign - --force --deep flutter/build/macos/Build/Products/Release/R-connect.app
+
+# Or re-sign with Developer ID (for distribution)
+codesign --sign "Developer ID Application: Your Name" --force --deep flutter/build/macos/Build/Products/Release/R-connect.app
 ```
 
 #### iOS Build Issues
@@ -313,7 +332,7 @@ RUSTFLAGS="-C target-cpu=apple-a14" cargo build --release --target aarch64-apple
 python3 build.py --flutter --debug
 
 # Run with debugging
-RUST_LOG=debug flutter/build/macos/Build/Products/Debug/NaiveRustDesk.app/Contents/MacOS/NaiveRustDesk
+RUST_LOG=debug flutter/build/macos/Build/Products/Debug/R-connect.app/Contents/MacOS/R-connect
 ```
 
 ## Distribution
