@@ -23,7 +23,10 @@
       "Bash(arch:*)",
       "Bash(export:*)",
       "Bash(export MACOSX_DEPLOYMENT_TARGET=10.14)",
-      "Bash(cargo:*)"
+      "Bash(cargo:*)",
+      "Bash(codesign:*)",
+      "Bash(open:*)",
+      "Bash(\"/Users/macbook/Data/Work/Freelance/rustdesk/flutter/build/macos/Build/Products/Release/R-connect.app/Contents/MacOS/R-connect\")"
     ],
     "deny": [],
     "ask": []
