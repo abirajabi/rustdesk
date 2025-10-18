@@ -1,6 +1,6 @@
-# Building NaiveRustDesk on Windows
+# Building R-connect on Windows
 
-This guide explains how to build NaiveRustDesk executables on Windows for desktop and mobile platforms.
+This guide explains how to build R-connect executables on Windows for desktop and mobile platforms.
 
 ## Prerequisites
 
@@ -235,11 +235,11 @@ naive_rust_desk.exe --uninstall-service
 #### Sample NSIS Installer Script
 ```nsis
 ; naiveRustdesk-installer.nsi
-!define APP_NAME "NaiveRustDesk"
+!define APP_NAME "R-connect"
 !define COMP_NAME "YourCompany"
 !define VERSION "1.4.2"
 !define DESCRIPTION "Remote Desktop Software"
-!define INSTALLER_NAME "NaiveRustDesk-Setup.exe"
+!define INSTALLER_NAME "R-connect-Setup.exe"
 !define MAIN_APP_EXE "naive_rust_desk.exe"
 !define INSTALL_TYPE "SetShellVarContext all"
 !define REG_ROOT "HKLM"
@@ -307,7 +307,7 @@ SectionEnd
 # Create WiX source files
 # Build MSI package
 candle naiveRustdesk.wxs
-light naiveRustdesk.wixobj -o NaiveRustDesk.msi
+light naiveRustdesk.wixobj -o R-connect.msi
 ```
 
 ## Troubleshooting
@@ -395,14 +395,14 @@ signtool verify /v flutter\build\windows\runner\Release\naive_rust_desk.exe
 ### Creating Portable Version
 ```cmd
 # Copy all files to a single directory
-mkdir NaiveRustDesk-Portable
-xcopy flutter\build\windows\runner\Release\* NaiveRustDesk-Portable\ /E
+mkdir R-connect-Portable
+xcopy flutter\build\windows\runner\Release\* R-connect-Portable\ /E
 
 # Create portable marker file
-echo. > NaiveRustDesk-Portable\portable.txt
+echo. > R-connect-Portable\portable.txt
 
 # Create ZIP archive
-powershell Compress-Archive -Path NaiveRustDesk-Portable -DestinationPath NaiveRustDesk-Portable.zip
+powershell Compress-Archive -Path R-connect-Portable -DestinationPath R-connect-Portable.zip
 ```
 
 ### Windows Store Package
@@ -411,10 +411,10 @@ powershell Compress-Archive -Path NaiveRustDesk-Portable -DestinationPath NaiveR
 # Create MSIX package for Microsoft Store
 
 # Use Visual Studio or command line tools
-makeappx pack /d "flutter\build\windows\runner\Release" /p "NaiveRustDesk.msix"
+makeappx pack /d "flutter\build\windows\runner\Release" /p "R-connect.msix"
 
 # Sign MSIX package
-signtool sign /fd SHA256 /a /f "certificate.pfx" /p "password" "NaiveRustDesk.msix"
+signtool sign /fd SHA256 /a /f "certificate.pfx" /p "password" "R-connect.msix"
 ```
 
 ### Distribution Options

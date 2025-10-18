@@ -4,7 +4,7 @@ version = "1.4.2"
 authors = ["rustdesk <info@rustdesk.com>"]
 edition = "2021"
 build= "build.rs"
-description = "RustDesk Remote Desktop"
+description = "R-connect Remote Desktop"
 default-run = "rustdesk"
 rust-version = "1.75"
 
@@ -205,7 +205,7 @@ exclude = ["vdi/host", "examples/custom_plugin"]
 LegalCopyright = "Copyright © 2025 Purslane Ltd. All rights reserved."
 ProductName = "R-connect"
 FileDescription = "R-connect Remote Desktop"
-OriginalFilename = "rustdesk.exe"
+OriginalFilename = "R-connect.exe"
 
 [target.'cfg(target_os="windows")'.build-dependencies]
 winres = "0.1"
@@ -222,7 +222,7 @@ docopt = "1.1"
 
 [package.metadata.bundle]
 name = "R-connect"
-identifier = "com.carriez.rconnect"
+identifier = "com.carriez.rustdesk"
 icon = ["res/32x32.png", "res/128x128.png", "res/128x128@2x.png"]
 osx_minimum_system_version = "10.14"
 

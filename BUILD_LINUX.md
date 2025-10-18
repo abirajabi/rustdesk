@@ -1,6 +1,6 @@
-# Building NaiveRustDesk on Linux
+# Building R-connect on Linux
 
-This guide explains how to build NaiveRustDesk executables on Linux for desktop and mobile platforms.
+This guide explains how to build R-connect executables on Linux for desktop and mobile platforms.
 
 ## Prerequisites
 
@@ -249,7 +249,7 @@ cat > install.sh << 'EOF'
 sudo mkdir -p /opt/naiveRustdesk
 sudo tar -xzf naiveRustdesk-linux-x64.tar.gz -C /opt/naiveRustdesk --strip-components=1
 sudo ln -sf /opt/naiveRustdesk/naiveRustdesk /usr/local/bin/naiveRustdesk
-echo "NaiveRustDesk installed successfully!"
+echo "R-connect installed successfully!"
 EOF
 chmod +x install.sh
 ```
@@ -259,7 +259,7 @@ chmod +x install.sh
 # Create desktop entry
 cat > ~/.local/share/applications/naiveRustdesk.desktop << 'EOF'
 [Desktop Entry]
-Name=NaiveRustDesk
+Name=R-connect
 Comment=Remote Desktop Software
 Exec=/usr/local/bin/naiveRustdesk
 Icon=/opt/naiveRustdesk/data/flutter_assets/assets/icon.png

@@ -1,6 +1,6 @@
-# Building NaiveRustDesk on macOS
+# Building R-connect on macOS
 
-This guide explains how to build NaiveRustDesk executables on macOS for desktop and mobile platforms.
+This guide explains how to build R-connect executables on macOS for desktop and mobile platforms.
 
 ## Prerequisites
 
@@ -216,7 +216,7 @@ flutter build macos --release --target-platform darwin-x64
 flutter build macos --release --target-platform darwin-arm64
 
 # Combine into universal binary using lipo
-lipo -create -output NaiveRustDesk-universal build/macos/Build/Products/Release-x64/NaiveRustDesk.app/Contents/MacOS/NaiveRustDesk build/macos/Build/Products/Release-arm64/NaiveRustDesk.app/Contents/MacOS/NaiveRustDesk
+lipo -create -output R-connect-universal build/macos/Build/Products/Release-x64/R-connect.app/Contents/MacOS/R-connect build/macos/Build/Products/Release-arm64/R-connect.app/Contents/MacOS/R-connect
 ```
 
 ## Build Outputs
@@ -341,18 +341,18 @@ RUST_LOG=debug flutter/build/macos/Build/Products/Debug/R-connect.app/Contents/M
 ```bash
 # Create a nice DMG with background and layout
 mkdir -p dmg-temp
-cp -r flutter/build/macos/Build/Products/Release/NaiveRustDesk.app dmg-temp/
+cp -r flutter/build/macos/Build/Products/Release/R-connect.app dmg-temp/
 ln -s /Applications dmg-temp/Applications
 
 # Create DMG
-hdiutil create -srcfolder dmg-temp -volname "NaiveRustDesk" -fs HFS+ -fsargs "-c c=64,a=16,e=16" -format UDRW temp.dmg
+hdiutil create -srcfolder dmg-temp -volname "R-connect" -fs HFS+ -fsargs "-c c=64,a=16,e=16" -format UDRW temp.dmg
 hdiutil attach temp.dmg -readwrite
 
 # Add background image and set layout (optional)
 # ... (custom DMG styling steps)
 
-hdiutil detach /Volumes/NaiveRustDesk
-hdiutil convert temp.dmg -format UDZO -o NaiveRustDesk-macOS.dmg
+hdiutil detach /Volumes/R-connect
+hdiutil convert temp.dmg -format UDZO -o R-connect-macOS.dmg
 rm -rf dmg-temp temp.dmg
 ```
 
@@ -363,10 +363,10 @@ cd flutter
 flutter build macos --release --obfuscate --split-debug-info=debug-info/
 
 # Create App Store package
-xcrun productbuild --component flutter/build/macos/Build/Products/Release/NaiveRustDesk.app /Applications NaiveRustDesk-AppStore.pkg
+xcrun productbuild --component flutter/build/macos/Build/Products/Release/R-connect.app /Applications R-connect-AppStore.pkg
 
 # Upload to App Store Connect
-xcrun altool --upload-package NaiveRustDesk-AppStore.pkg --type macos --username "your-apple-id@example.com" --password "@keychain:Developer-altool"
+xcrun altool --upload-package R-connect-AppStore.pkg --type macos --username "your-apple-id@example.com" --password "@keychain:Developer-altool"
 ```
 
 ### Homebrew Cask (for easy installation)
@@ -377,25 +377,25 @@ cask "naiveRustdesk" do
   version "1.4.2"
   sha256 "your-sha256-hash"
 
-  url "https://github.com/your-repo/naiveRustdesk/releases/download/v#{version}/NaiveRustDesk-macOS.dmg"
-  name "NaiveRustDesk"
+  url "https://github.com/your-repo/naiveRustdesk/releases/download/v#{version}/R-connect-macOS.dmg"
+  name "R-connect"
   desc "Remote desktop software"
   homepage "https://github.com/your-repo/naiveRustdesk"
 
   depends_on macos: ">= :mojave"
 
-  app "NaiveRustDesk.app"
+  app "R-connect.app"
 end
 ```
 
 ### Package Verification
 ```bash
 # Verify code signature
-codesign --verify --verbose flutter/build/macos/Build/Products/Release/NaiveRustDesk.app
+codesign --verify --verbose flutter/build/macos/Build/Products/Release/R-connect.app
 
 # Check notarization status
-spctl --assess --verbose flutter/build/macos/Build/Products/Release/NaiveRustDesk.app
+spctl --assess --verbose flutter/build/macos/Build/Products/Release/R-connect.app
 
 # Test installation
-sudo installer -pkg NaiveRustDesk-AppStore.pkg -target /
+sudo installer -pkg R-connect-AppStore.pkg -target /
 ```
