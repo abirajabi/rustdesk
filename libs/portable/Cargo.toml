@@ -1,5 +1,5 @@
 [package]
-name = "rustdesk-portable-packer"
+name = "rconnect-portable-packer"
 version = "1.4.2"
 edition = "2021"
 description = "RustDesk Remote Desktop"
