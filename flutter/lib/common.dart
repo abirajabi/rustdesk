@@ -3553,11 +3553,11 @@ Widget loadLogo() {
 }
 
 Widget loadIcon(double size) {
-  return Image.asset('assets/icon.png',
+  return Image.asset('assets/logo.png',
       width: size,
       height: size,
       errorBuilder: (ctx, error, stackTrace) => Image.asset(
-            'assets/icon.png',
+            'assets/logo.png',
             width: size,
             height: size,
           ),);
