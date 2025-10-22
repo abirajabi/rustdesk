@@ -2218,7 +2218,7 @@ class _AboutState extends State<_About> {
                   child: Text('${translate('Build Date')}: $buildDate')
                       .marginSymmetric(vertical: 4.0)),
             ],
-          ).marginOnly(left: _kContentHMargin)
+          )
         ]),
       );
     });
