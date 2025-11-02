@@ -3,11 +3,11 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common/shared_state.dart';
-import 'package:rconnect/common/widgets/toolbar.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/mobile/widgets/gesture_help.dart';
-import 'package:rconnect/models/chat_model.dart';
+import 'package:siskojaya/common/shared_state.dart';
+import 'package:siskojaya/common/widgets/toolbar.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/mobile/widgets/gesture_help.dart';
+import 'package:siskojaya/models/chat_model.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

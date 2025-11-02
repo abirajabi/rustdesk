@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart';
 
-import 'package:rconnect/models/platform_model.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/models/model.dart';
-import 'package:rconnect/models/input_model.dart';
+import 'package:siskojaya/models/platform_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/models/model.dart';
+import 'package:siskojaya/models/input_model.dart';
 
 import './gestures.dart';
 

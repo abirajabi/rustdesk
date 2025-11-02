@@ -7,10 +7,10 @@ import 'package:external_path/external_path.dart';
 import 'package:ffi/ffi.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/main.dart';
-import 'package:rconnect/generated_bridge.dart'
-if (dart.library.html) 'package:rconnect/web/bridge.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/main.dart';
+import 'package:siskojaya/generated_bridge.dart'
+if (dart.library.html) 'package:siskojaya/web/bridge.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
 

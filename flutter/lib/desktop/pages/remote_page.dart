@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
-import 'package:rconnect/models/state_model.dart';
+import 'package:siskojaya/models/state_model.dart';
 
 import '../../consts.dart';
 import '../../common/widgets/overlay.dart';
@@ -22,8 +22,8 @@ import '../widgets/remote_toolbar.dart';
 import '../widgets/kb_layout_type_chooser.dart';
 import '../widgets/tabbar_widget.dart';
 
-import 'package:rconnect/native/custom_cursor.dart'
-    if (dart.library.html) 'package:rconnect/web/custom_cursor.dart';
+import 'package:siskojaya/native/custom_cursor.dart'
+    if (dart.library.html) 'package:siskojaya/web/custom_cursor.dart';
 
 final SimpleWrapper<bool> _firstEnterImage = SimpleWrapper(false);
 

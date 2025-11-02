@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/main.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/main.dart';
 import 'package:get/get.dart';
 
 class RefreshWrapper extends StatefulWidget {

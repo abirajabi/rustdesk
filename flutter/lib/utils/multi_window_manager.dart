@@ -4,10 +4,10 @@ import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/main.dart';
-import 'package:rconnect/models/input_model.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/main.dart';
+import 'package:siskojaya/models/input_model.dart';
 
 /// must keep the order
 // ignore: constant_identifier_names

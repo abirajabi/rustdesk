@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/desktop/pages/desktop_home_page.dart';
-import 'package:rconnect/mobile/widgets/dialog.dart';
-import 'package:rconnect/models/chat_model.dart';
+import 'package:siskojaya/desktop/pages/desktop_home_page.dart';
+import 'package:siskojaya/mobile/widgets/dialog.dart';
+import 'package:siskojaya/models/chat_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 

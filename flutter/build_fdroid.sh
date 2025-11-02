@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Script to build F-Droid release of R-connect
+# Script to build F-Droid release of SISKOJAYA
 #
 # Copyright (C) 2024, The RustDesk Authors
 #               2024, Vasyl Gello <vasek.gello@gmail.com>

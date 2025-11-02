@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/models/model.dart';
-import 'package:rconnect/models/terminal_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/models/model.dart';
+import 'package:siskojaya/models/terminal_model.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:xterm/xterm.dart';
 import '../../desktop/pages/terminal_connection_manager.dart';

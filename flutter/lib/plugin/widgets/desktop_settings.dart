@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/models/platform_model.dart';
-import 'package:rconnect/plugin/model.dart';
-import 'package:rconnect/plugin/common.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/models/platform_model.dart';
+import 'package:siskojaya/plugin/model.dart';
+import 'package:siskojaya/plugin/common.dart';
 import 'package:get/get.dart';
 
 import '../manager.dart';

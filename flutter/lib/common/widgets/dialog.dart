@@ -4,12 +4,12 @@ import 'dart:convert';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common/shared_state.dart';
-import 'package:rconnect/common/widgets/setting_widgets.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/models/peer_model.dart';
-import 'package:rconnect/models/peer_tab_model.dart';
-import 'package:rconnect/models/state_model.dart';
+import 'package:siskojaya/common/shared_state.dart';
+import 'package:siskojaya/common/widgets/setting_widgets.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/models/peer_model.dart';
+import 'package:siskojaya/models/peer_tab_model.dart';
+import 'package:siskojaya/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 

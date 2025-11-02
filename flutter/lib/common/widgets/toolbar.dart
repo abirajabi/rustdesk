@@ -3,13 +3,13 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/common/shared_state.dart';
-import 'package:rconnect/common/widgets/dialog.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/desktop/widgets/remote_toolbar.dart';
-import 'package:rconnect/models/model.dart';
-import 'package:rconnect/models/platform_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/common/shared_state.dart';
+import 'package:siskojaya/common/widgets/dialog.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/desktop/widgets/remote_toolbar.dart';
+import 'package:siskojaya/models/model.dart';
+import 'package:siskojaya/models/platform_model.dart';
 import 'package:get/get.dart';
 
 bool isEditOsPassword = false;

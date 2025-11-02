@@ -9,26 +9,26 @@ import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common/widgets/peers_view.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/models/ab_model.dart';
-import 'package:rconnect/models/chat_model.dart';
-import 'package:rconnect/models/cm_file_model.dart';
-import 'package:rconnect/models/file_model.dart';
-import 'package:rconnect/models/group_model.dart';
-import 'package:rconnect/models/peer_model.dart';
-import 'package:rconnect/models/peer_tab_model.dart';
-import 'package:rconnect/models/printer_model.dart';
-import 'package:rconnect/models/server_model.dart';
-import 'package:rconnect/models/user_model.dart';
-import 'package:rconnect/models/state_model.dart';
-import 'package:rconnect/models/desktop_render_texture.dart';
-import 'package:rconnect/models/terminal_model.dart';
-import 'package:rconnect/plugin/event.dart';
-import 'package:rconnect/plugin/manager.dart';
-import 'package:rconnect/plugin/widgets/desc_ui.dart';
-import 'package:rconnect/common/shared_state.dart';
-import 'package:rconnect/utils/multi_window_manager.dart';
+import 'package:siskojaya/common/widgets/peers_view.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/models/ab_model.dart';
+import 'package:siskojaya/models/chat_model.dart';
+import 'package:siskojaya/models/cm_file_model.dart';
+import 'package:siskojaya/models/file_model.dart';
+import 'package:siskojaya/models/group_model.dart';
+import 'package:siskojaya/models/peer_model.dart';
+import 'package:siskojaya/models/peer_tab_model.dart';
+import 'package:siskojaya/models/printer_model.dart';
+import 'package:siskojaya/models/server_model.dart';
+import 'package:siskojaya/models/user_model.dart';
+import 'package:siskojaya/models/state_model.dart';
+import 'package:siskojaya/models/desktop_render_texture.dart';
+import 'package:siskojaya/models/terminal_model.dart';
+import 'package:siskojaya/plugin/event.dart';
+import 'package:siskojaya/plugin/manager.dart';
+import 'package:siskojaya/plugin/widgets/desc_ui.dart';
+import 'package:siskojaya/common/shared_state.dart';
+import 'package:siskojaya/utils/multi_window_manager.dart';
 import 'package:tuple/tuple.dart';
 import 'package:image/image.dart' as img2;
 import 'package:flutter_svg/flutter_svg.dart';
@@ -43,10 +43,10 @@ import '../common/widgets/dialog.dart';
 import 'input_model.dart';
 import 'platform_model.dart';
 
-import 'package:rconnect/generated_bridge.dart'
-    if (dart.library.html) 'package:rconnect/web/bridge.dart';
-import 'package:rconnect/native/custom_cursor.dart'
-    if (dart.library.html) 'package:rconnect/web/custom_cursor.dart';
+import 'package:siskojaya/generated_bridge.dart'
+    if (dart.library.html) 'package:siskojaya/web/bridge.dart';
+import 'package:siskojaya/native/custom_cursor.dart'
+    if (dart.library.html) 'package:siskojaya/web/custom_cursor.dart';
 
 typedef HandleMsgBox = Function(Map<String, dynamic> evt, String id);
 typedef ReconnectHandle = Function(OverlayDialogManager, SessionID, bool);

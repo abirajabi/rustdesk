@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:debounce_throttle/debounce_throttle.dart';
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/models/platform_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/models/platform_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 

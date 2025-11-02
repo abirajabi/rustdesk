@@ -6,18 +6,18 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common/widgets/overlay.dart';
-import 'package:rconnect/desktop/pages/desktop_tab_page.dart';
-import 'package:rconnect/desktop/pages/install_page.dart';
-import 'package:rconnect/desktop/pages/server_page.dart';
-import 'package:rconnect/desktop/screen/desktop_file_transfer_screen.dart';
-import 'package:rconnect/desktop/screen/desktop_view_camera_screen.dart';
-import 'package:rconnect/desktop/screen/desktop_port_forward_screen.dart';
-import 'package:rconnect/desktop/screen/desktop_remote_screen.dart';
-import 'package:rconnect/desktop/screen/desktop_terminal_screen.dart';
-import 'package:rconnect/desktop/widgets/refresh_wrapper.dart';
-import 'package:rconnect/models/state_model.dart';
-import 'package:rconnect/utils/multi_window_manager.dart';
+import 'package:siskojaya/common/widgets/overlay.dart';
+import 'package:siskojaya/desktop/pages/desktop_tab_page.dart';
+import 'package:siskojaya/desktop/pages/install_page.dart';
+import 'package:siskojaya/desktop/pages/server_page.dart';
+import 'package:siskojaya/desktop/screen/desktop_file_transfer_screen.dart';
+import 'package:siskojaya/desktop/screen/desktop_view_camera_screen.dart';
+import 'package:siskojaya/desktop/screen/desktop_port_forward_screen.dart';
+import 'package:siskojaya/desktop/screen/desktop_remote_screen.dart';
+import 'package:siskojaya/desktop/screen/desktop_terminal_screen.dart';
+import 'package:siskojaya/desktop/widgets/refresh_wrapper.dart';
+import 'package:siskojaya/models/state_model.dart';
+import 'package:siskojaya/utils/multi_window_manager.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -29,8 +29,8 @@ import 'mobile/pages/home_page.dart';
 import 'mobile/pages/server_page.dart';
 import 'models/platform_model.dart';
 
-import 'package:rconnect/plugin/handlers.dart'
-    if (dart.library.html) 'package:rconnect/web/plugin/handlers.dart';
+import 'package:siskojaya/plugin/handlers.dart'
+    if (dart.library.html) 'package:siskojaya/web/plugin/handlers.dart';
 
 /// Basic window and launch properties.
 int? kWindowId;

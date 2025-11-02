@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:rconnect/common/hbbs/hbbs.dart';
-import 'package:rconnect/common/widgets/login.dart';
-import 'package:rconnect/common/widgets/peers_view.dart';
-import 'package:rconnect/models/state_model.dart';
+import 'package:siskojaya/common/hbbs/hbbs.dart';
+import 'package:siskojaya/common/widgets/login.dart';
+import 'package:siskojaya/common/widgets/peers_view.dart';
+import 'package:siskojaya/models/state_model.dart';
 import 'package:get/get.dart';
 
 import '../../common.dart';

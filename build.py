@@ -182,7 +182,7 @@ def generate_build_script_for_docker():
             vcpkg/bootstrap-vcpkg.sh
             popd
             $VCPKG_ROOT/vcpkg install --x-install-root="$VCPKG_ROOT/installed"
-            # build rconnect
+            # build siskojaya
             ./build.py --flutter --hwcodec
         ''')
     system2("chmod +x /tmp/build.sh")
@@ -292,13 +292,13 @@ def generate_control_file(version):
     control_file_path = "../res/DEBIAN/control"
     system2('/bin/rm -rf %s' % control_file_path)
 
-    content = """Package: rconnect
+    content = """Package: siskojaya
 Section: net
 Priority: optional
 Version: %s
 Architecture: %s
-Maintainer: rconnect <info@rconnect.com>
-Homepage: https://rconnect.com
+Maintainer: siskojaya <info@siskojaya.com>
+Homepage: https://siskojaya.com
 Depends: libgtk-3-0, libxcb-randr0, libxdo3, libxfixes3, libxcb-shape0, libxcb-xfixes0, libasound2, libsystemd0, curl, libva2, libva-drm2, libva-x11-2, libgstreamer-plugins-base1.0-0, libpam0g, gstreamer1.0-pipewire%s
 Recommends: libayatana-appindicator3-1
 Description: A remote control software.
@@ -322,82 +322,82 @@ def build_flutter_deb(version, features):
     os.chdir('flutter')
     system2('fvm flutter build linux --release')
     system2('mkdir -p tmpdeb/usr/bin/')
-    system2('mkdir -p tmpdeb/usr/share/rconnect')
-    system2('mkdir -p tmpdeb/etc/rconnect/')
+    system2('mkdir -p tmpdeb/usr/share/siskojaya')
+    system2('mkdir -p tmpdeb/etc/siskojaya/')
     system2('mkdir -p tmpdeb/etc/pam.d/')
-    system2('mkdir -p tmpdeb/usr/share/rconnect/files/systemd/')
+    system2('mkdir -p tmpdeb/usr/share/siskojaya/files/systemd/')
     system2('mkdir -p tmpdeb/usr/share/icons/hicolor/256x256/apps/')
     system2('mkdir -p tmpdeb/usr/share/icons/hicolor/scalable/apps/')
     system2('mkdir -p tmpdeb/usr/share/applications/')
     system2('mkdir -p tmpdeb/usr/share/polkit-1/actions')
-    system2('rm tmpdeb/usr/bin/rconnect || true')
+    system2('rm tmpdeb/usr/bin/siskojaya || true')
     system2(
-        f'cp -r {flutter_build_dir}/* tmpdeb/usr/share/rconnect/')
+        f'cp -r {flutter_build_dir}/* tmpdeb/usr/share/siskojaya/')
     system2(
-        'cp ../res/rconnect.service tmpdeb/usr/share/rconnect/files/systemd/')
+        'cp ../res/siskojaya.service tmpdeb/usr/share/siskojaya/files/systemd/')
     system2(
-        'cp ../res/128x128@2x.png tmpdeb/usr/share/icons/hicolor/256x256/apps/rconnect.png')
+        'cp ../res/128x128@2x.png tmpdeb/usr/share/icons/hicolor/256x256/apps/siskojaya.png')
     system2(
-        'cp ../res/scalable.svg tmpdeb/usr/share/icons/hicolor/scalable/apps/rconnect.svg')
+        'cp ../res/scalable.svg tmpdeb/usr/share/icons/hicolor/scalable/apps/siskojaya.svg')
     system2(
-        'cp ../res/rconnect.desktop tmpdeb/usr/share/applications/rconnect.desktop')
+        'cp ../res/siskojaya.desktop tmpdeb/usr/share/applications/siskojaya.desktop')
     system2(
-        'cp ../res/rconnect-link.desktop tmpdeb/usr/share/applications/rconnect-link.desktop')
+        'cp ../res/siskojaya-link.desktop tmpdeb/usr/share/applications/siskojaya-link.desktop')
     system2(
-        'cp ../res/startwm.sh tmpdeb/etc/rconnect/')
+        'cp ../res/startwm.sh tmpdeb/etc/siskojaya/')
     system2(
-        'cp ../res/xorg.conf tmpdeb/etc/rconnect/')
+        'cp ../res/xorg.conf tmpdeb/etc/siskojaya/')
     system2(
-        'cp ../res/pam.d/rconnect.debian tmpdeb/etc/pam.d/rconnect')
+        'cp ../res/pam.d/siskojaya.debian tmpdeb/etc/pam.d/siskojaya')
     system2(
-        "echo \"#!/bin/sh\" >> tmpdeb/usr/share/rconnect/files/polkit && chmod a+x tmpdeb/usr/share/rconnect/files/polkit")
+        "echo \"#!/bin/sh\" >> tmpdeb/usr/share/siskojaya/files/polkit && chmod a+x tmpdeb/usr/share/siskojaya/files/polkit")
 
     system2('mkdir -p tmpdeb/DEBIAN')
     generate_control_file(version)
     system2('cp -a ../res/DEBIAN/* tmpdeb/DEBIAN/')
     md5_file_folder("tmpdeb/")
-    system2('dpkg-deb -b tmpdeb rconnect.deb;')
+    system2('dpkg-deb -b tmpdeb siskojaya.deb;')
 
     system2('/bin/rm -rf tmpdeb/')
     system2('/bin/rm -rf ../res/DEBIAN/control')
-    os.rename('rconnect.deb', '../rconnect-%s.deb' % version)
+    os.rename('siskojaya.deb', '../siskojaya-%s.deb' % version)
     os.chdir("..")
 
 
 def build_deb_from_folder(version, binary_folder):
     os.chdir('flutter')
     system2('mkdir -p tmpdeb/usr/bin/')
-    system2('mkdir -p tmpdeb/usr/share/rconnect')
-    system2('mkdir -p tmpdeb/usr/share/rconnect/files/systemd/')
+    system2('mkdir -p tmpdeb/usr/share/siskojaya')
+    system2('mkdir -p tmpdeb/usr/share/siskojaya/files/systemd/')
     system2('mkdir -p tmpdeb/usr/share/icons/hicolor/256x256/apps/')
     system2('mkdir -p tmpdeb/usr/share/icons/hicolor/scalable/apps/')
     system2('mkdir -p tmpdeb/usr/share/applications/')
     system2('mkdir -p tmpdeb/usr/share/polkit-1/actions')
-    system2('rm tmpdeb/usr/bin/rconnect || true')
+    system2('rm tmpdeb/usr/bin/siskojaya || true')
     system2(
-        f'cp -r ../{binary_folder}/* tmpdeb/usr/share/rconnect/')
+        f'cp -r ../{binary_folder}/* tmpdeb/usr/share/siskojaya/')
     system2(
-        'cp ../res/rconnect.service tmpdeb/usr/share/rconnect/files/systemd/')
+        'cp ../res/siskojaya.service tmpdeb/usr/share/siskojaya/files/systemd/')
     system2(
-        'cp ../res/128x128@2x.png tmpdeb/usr/share/icons/hicolor/256x256/apps/rconnect.png')
+        'cp ../res/128x128@2x.png tmpdeb/usr/share/icons/hicolor/256x256/apps/siskojaya.png')
     system2(
-        'cp ../res/scalable.svg tmpdeb/usr/share/icons/hicolor/scalable/apps/rconnect.svg')
+        'cp ../res/scalable.svg tmpdeb/usr/share/icons/hicolor/scalable/apps/siskojaya.svg')
     system2(
-        'cp ../res/rconnect.desktop tmpdeb/usr/share/applications/rconnect.desktop')
+        'cp ../res/siskojaya.desktop tmpdeb/usr/share/applications/siskojaya.desktop')
     system2(
-        'cp ../res/rconnect-link.desktop tmpdeb/usr/share/applications/rconnect-link.desktop')
+        'cp ../res/siskojaya-link.desktop tmpdeb/usr/share/applications/siskojaya-link.desktop')
     system2(
-        "echo \"#!/bin/sh\" >> tmpdeb/usr/share/rconnect/files/polkit && chmod a+x tmpdeb/usr/share/rconnect/files/polkit")
+        "echo \"#!/bin/sh\" >> tmpdeb/usr/share/siskojaya/files/polkit && chmod a+x tmpdeb/usr/share/siskojaya/files/polkit")
 
     system2('mkdir -p tmpdeb/DEBIAN')
     generate_control_file(version)
     system2('cp -a ../res/DEBIAN/* tmpdeb/DEBIAN/')
     md5_file_folder("tmpdeb/")
-    system2('dpkg-deb -b tmpdeb rconnect.deb;')
+    system2('dpkg-deb -b tmpdeb siskojaya.deb;')
 
     system2('/bin/rm -rf tmpdeb/')
     system2('/bin/rm -rf ../res/DEBIAN/control')
-    os.rename('rconnect.deb', '../rconnect-%s.deb' % version)
+    os.rename('siskojaya.deb', '../siskojaya-%s.deb' % version)
     os.chdir("..")
 
 
@@ -411,11 +411,11 @@ def build_flutter_dmg(version, features):
         "cp target/release/liblibrustdesk.dylib target/release/librustdesk.dylib")
     os.chdir('flutter')
     system2('fvm flutter build macos --release')
-    system2('cp -rf ../target/release/service ./build/macos/Build/Products/Release/R-connect.app/Contents/MacOS/')
+    system2('cp -rf ../target/release/service ./build/macos/Build/Products/Release/SISKOJAYA.app/Contents/MacOS/')
     '''
     system2(
-        "create-dmg --volname \"R-connect Installer\" --window-pos 200 120 --window-size 800 400 --icon-size 100 --app-drop-link 600 185 --icon R-connect.app 200 190 --hide-extension R-connect.app rconnect.dmg ./build/macos/Build/Products/Release/R-connect.app")
-    os.rename("rconnect.dmg", f"../rconnect-{version}.dmg")
+        "create-dmg --volname \"SISKOJAYA Installer\" --window-pos 200 120 --window-size 800 400 --icon-size 100 --app-drop-link 600 185 --icon SISKOJAYA.app 200 190 --hide-extension SISKOJAYA.app siskojaya.dmg ./build/macos/Build/Products/Release/SISKOJAYA.app")
+    os.rename("siskojaya.dmg", f"../siskojaya-{version}.dmg")
     '''
     os.chdir("..")
 
@@ -431,6 +431,43 @@ def build_flutter_arch_manjaro(version, features):
     system2('HBB=`pwd`/.. FLUTTER=1 makepkg -f')
 
 
+def download_printer_driver(flutter_build_dir):
+    """Download and extract printer driver for Windows"""
+    driver_url = "https://github.com/rustdesk/hbb_common/releases/download/driver/rustdesk_printer_driver_v4-1.4.zip"
+    adapter_url = "https://github.com/rustdesk/hbb_common/releases/download/driver/printer_driver_adapter.zip"
+
+    print("Downloading printer driver...")
+    driver_zip = "rustdesk_printer_driver_v4-1.4.zip"
+    adapter_zip = "printer_driver_adapter.zip"
+
+    try:
+        urllib.request.urlretrieve(driver_url, driver_zip)
+        urllib.request.urlretrieve(adapter_url, adapter_zip)
+
+        # Extract driver
+        with zipfile.ZipFile(driver_zip, 'r') as zip_ref:
+            zip_ref.extractall('.')
+
+        # Extract adapter
+        with zipfile.ZipFile(adapter_zip, 'r') as zip_ref:
+            zip_ref.extractall(flutter_build_dir)
+
+        # Move driver to correct location
+        drivers_dir = os.path.join(flutter_build_dir, 'drivers')
+        os.makedirs(drivers_dir, exist_ok=True)
+        shutil.move('rustdesk_printer_driver_v4-1.4',
+                   os.path.join(drivers_dir, 'RustDeskPrinterDriver'))
+
+        # Cleanup
+        os.remove(driver_zip)
+        os.remove(adapter_zip)
+
+        print("Printer driver downloaded and extracted successfully!")
+    except Exception as e:
+        print(f"Warning: Failed to download printer driver: {e}")
+        print("The installer will be built without printer support.")
+
+
 def build_flutter_windows(version, features, skip_portable_pack):
     if not skip_cargo:
         system2(f'cargo build --features {features} --lib --release')
@@ -442,24 +479,26 @@ def build_flutter_windows(version, features, skip_portable_pack):
     os.chdir('..')
     shutil.copy2('target/release/deps/dylib_virtual_display.dll',
                  flutter_build_dir_2)
+    # Download printer driver
+    # download_printer_driver(flutter_build_dir_2)
     if skip_portable_pack:
         return
     os.chdir('libs/portable')
     system2('pip3 install -r requirements.txt')
     system2(
-        f'python3 ./generate.py -f ../../{flutter_build_dir_2} -o . -e ../../{flutter_build_dir_2}/R-Connect.exe')
+        f'python3 ./generate.py -f ../../{flutter_build_dir_2} -o . -e ../../{flutter_build_dir_2}/SISKOJAYA.exe')
     os.chdir('../..')
-    if os.path.exists('./rconnect_portable.exe'):
-        os.replace('./target/release/rconnect-portable-packer.exe',
-                   './rconnect_portable.exe')
+    if os.path.exists('./siskojaya_portable.exe'):
+        os.replace('./target/release/siskojaya-portable-packer.exe',
+                   './siskojaya_portable.exe')
     else:
-        os.rename('./target/release/rconnect-portable-packer.exe',
-                  './rconnect_portable.exe')
+        os.rename('./target/release/siskojaya-portable-packer.exe',
+                  './siskojaya_portable.exe')
     print(
-        f'output location: {os.path.abspath(os.curdir)}/rconnect_portable.exe')
-    os.rename('./rconnect_portable.exe', f'./rconnect-{version}-install.exe')
+        f'output location: {os.path.abspath(os.curdir)}/siskojaya_portable.exe')
+    os.rename('./siskojaya_portable.exe', f'./siskojaya-{version}-install.exe')
     print(
-        f'output location: {os.path.abspath(os.curdir)}/rconnect-{version}-install.exe')
+        f'output location: {os.path.abspath(os.curdir)}/siskojaya-{version}-install.exe')
 
 
 def main():
@@ -496,23 +535,23 @@ def main():
             build_flutter_windows(version, features, args.skip_portable_pack)
             return
         system2('cargo build --release --features ' + features)
-        # system2('upx.exe target/release/rconnect.exe')
-        system2('mv target/release/rconnect.exe target/release/R-connect.exe')
+        # system2('upx.exe target/release/siskojaya.exe')
+        system2('mv target/release/siskojaya.exe target/release/SISKOJAYA.exe')
         pa = os.environ.get('P')
         if pa:
             # https://certera.com/kb/tutorial-guide-for-safenet-authentication-client-for-code-signing/
             system2(
                 f'signtool sign /a /v /p {pa} /debug /f .\\cert.pfx /t http://timestamp.digicert.com  '
-                'target\\release\\R-connect.exe')
+                'target\\release\\SISKOJAYA.exe')
         else:
             print('Not signed')
         system2(
-            f'cp -rf target/release/R-connect.exe {res_dir}')
+            f'cp -rf target/release/SISKOJAYA.exe {res_dir}')
         os.chdir('libs/portable')
         system2('pip3 install -r requirements.txt')
         system2(
-            f'python3 ./generate.py -f ../../{res_dir} -o . -e ../../{res_dir}/rconnect-{version}-win7-install.exe')
-        system2('mv ../../{res_dir}/rconnect-{version}-win7-install.exe ../..')
+            f'python3 ./generate.py -f ../../{res_dir} -o . -e ../../{res_dir}/siskojaya-{version}-win7-install.exe')
+        system2('mv ../../{res_dir}/siskojaya-{version}-win7-install.exe ../..')
     elif os.path.isfile('/usr/bin/pacman'):
         # pacman -S -needed base-devel
         system2("sed -i 's/pkgver=.*/pkgver=%s/g' res/PKGBUILD" % version)
@@ -521,32 +560,32 @@ def main():
         else:
             system2('cargo build --release --features ' + features)
             system2('git checkout src/ui/common.tis')
-            system2('strip target/release/rconnect')
+            system2('strip target/release/siskojaya')
             system2('ln -s res/pacman_install && ln -s res/PKGBUILD')
             system2('HBB=`pwd` makepkg -f')
-        system2('mv rconnect-%s-0-x86_64.pkg.tar.zst rconnect-%s-manjaro-arch.pkg.tar.zst' % (
+        system2('mv siskojaya-%s-0-x86_64.pkg.tar.zst siskojaya-%s-manjaro-arch.pkg.tar.zst' % (
             version, version))
-        # pacman -U ./rconnect.pkg.tar.zst
+        # pacman -U ./siskojaya.pkg.tar.zst
     elif os.path.isfile('/usr/bin/yum'):
         system2('cargo build --release --features ' + features)
-        system2('strip target/release/rconnect')
+        system2('strip target/release/siskojaya')
         system2(
             "sed -i 's/Version:    .*/Version:    %s/g' res/rpm.spec" % version)
         system2('HBB=`pwd` rpmbuild -ba res/rpm.spec')
         system2(
-            'mv $HOME/rpmbuild/RPMS/x86_64/rconnect-%s-0.x86_64.rpm ./rconnect-%s-fedora28-centos8.rpm' % (
+            'mv $HOME/rpmbuild/RPMS/x86_64/siskojaya-%s-0.x86_64.rpm ./siskojaya-%s-fedora28-centos8.rpm' % (
                 version, version))
-        # yum localinstall rconnect.rpm
+        # yum localinstall siskojaya.rpm
     elif os.path.isfile('/usr/bin/zypper'):
         system2('cargo build --release --features ' + features)
-        system2('strip target/release/rconnect')
+        system2('strip target/release/siskojaya')
         system2(
             "sed -i 's/Version:    .*/Version:    %s/g' res/rpm-suse.spec" % version)
         system2('HBB=`pwd` rpmbuild -ba res/rpm-suse.spec')
         system2(
-            'mv $HOME/rpmbuild/RPMS/x86_64/rconnect-%s-0.x86_64.rpm ./rconnect-%s-suse.rpm' % (
+            'mv $HOME/rpmbuild/RPMS/x86_64/siskojaya-%s-0.x86_64.rpm ./siskojaya-%s-suse.rpm' % (
                 version, version))
-        # yum localinstall rconnect.rpm
+        # yum localinstall siskojaya.rpm
     else:
         if flutter:
             if osx:
@@ -554,15 +593,15 @@ def main():
                 pass
             else:
                 # system2(
-                #     'mv target/release/bundle/deb/rconnect*.deb ./flutter/rconnect.deb')
+                #     'mv target/release/bundle/deb/siskojaya*.deb ./flutter/siskojaya.deb')
                 build_flutter_deb(version, features)
         else:
             system2('cargo bundle --release --features ' + features)
             if osx:
                 system2(
-                    'strip target/release/bundle/osx/R-connect.app/Contents/MacOS/rconnect')
+                    'strip target/release/bundle/osx/SISKOJAYA.app/Contents/MacOS/siskojaya')
                 system2(
-                    'cp libsciter.dylib target/release/bundle/osx/R-connect.app/Contents/MacOS/')
+                    'cp libsciter.dylib target/release/bundle/osx/SISKOJAYA.app/Contents/MacOS/')
                 # https://github.com/sindresorhus/create-dmg
                 system2('/bin/rm -rf *.dmg')
                 pa = os.environ.get('P')
@@ -570,65 +609,65 @@ def main():
                     system2('''
     # buggy: rcodesign sign ... path/*, have to sign one by one
     # install rcodesign via cargo install apple-codesign
-    #rcodesign sign --p12-file ~/.p12/rconnect-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./target/release/bundle/osx/R-connect.app/Contents/MacOS/rconnect
-    #rcodesign sign --p12-file ~/.p12/rconnect-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./target/release/bundle/osx/R-connect.app/Contents/MacOS/libsciter.dylib
-    #rcodesign sign --p12-file ~/.p12/rconnect-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./target/release/bundle/osx/R-connect.app
+    #rcodesign sign --p12-file ~/.p12/siskojaya-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./target/release/bundle/osx/SISKOJAYA.app/Contents/MacOS/siskojaya
+    #rcodesign sign --p12-file ~/.p12/siskojaya-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./target/release/bundle/osx/SISKOJAYA.app/Contents/MacOS/libsciter.dylib
+    #rcodesign sign --p12-file ~/.p12/siskojaya-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./target/release/bundle/osx/SISKOJAYA.app
     # goto "Keychain Access" -> "My Certificates" for below id which starts with "Developer ID Application:"
-    codesign -s "Developer ID Application: {0}" --force --options runtime  ./target/release/bundle/osx/R-connect.app/Contents/MacOS/*
-    codesign -s "Developer ID Application: {0}" --force --options runtime  ./target/release/bundle/osx/R-connect.app
+    codesign -s "Developer ID Application: {0}" --force --options runtime  ./target/release/bundle/osx/SISKOJAYA.app/Contents/MacOS/*
+    codesign -s "Developer ID Application: {0}" --force --options runtime  ./target/release/bundle/osx/SISKOJAYA.app
     '''.format(pa))
                 system2(
-                    'create-dmg "R-connect %s.dmg" "target/release/bundle/osx/R-connect.app"' % version)
-                os.rename('R-connect %s.dmg' %
-                          version, 'rconnect-%s.dmg' % version)
+                    'create-dmg "SISKOJAYA %s.dmg" "target/release/bundle/osx/SISKOJAYA.app"' % version)
+                os.rename('SISKOJAYA %s.dmg' %
+                          version, 'siskojaya-%s.dmg' % version)
                 if pa:
                     system2('''
     # https://pyoxidizer.readthedocs.io/en/apple-codesign-0.14.0/apple_codesign.html
     # https://pyoxidizer.readthedocs.io/en/stable/tugger_code_signing.html
     # https://developer.apple.com/developer-id/
     # goto xcode and login with apple id, manager certificates (Developer ID Application and/or Developer ID Installer) online there (only download and double click (install) cer file can not export p12 because no private key)
-    #rcodesign sign --p12-file ~/.p12/rconnect-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./rconnect-{1}.dmg
-    codesign -s "Developer ID Application: {0}" --force --options runtime ./rconnect-{1}.dmg
+    #rcodesign sign --p12-file ~/.p12/siskojaya-developer-id.p12 --p12-password-file ~/.p12/.cert-pass --code-signature-flags runtime ./siskojaya-{1}.dmg
+    codesign -s "Developer ID Application: {0}" --force --options runtime ./siskojaya-{1}.dmg
     # https://appstoreconnect.apple.com/access/api
     # https://gregoryszorc.com/docs/apple-codesign/stable/apple_codesign_getting_started.html#apple-codesign-app-store-connect-api-key
     # p8 file is generated when you generate api key (can download only once)
-    rcodesign notary-submit --api-key-path ../.p12/api-key.json  --staple rconnect-{1}.dmg
-    # verify:  spctl -a -t exec -v /Applications/R-connect.app
+    rcodesign notary-submit --api-key-path ../.p12/api-key.json  --staple siskojaya-{1}.dmg
+    # verify:  spctl -a -t exec -v /Applications/SISKOJAYA.app
     '''.format(pa, version))
                 else:
                     print('Not signed')
             else:
                 # build deb package
                 system2(
-                    'mv target/release/bundle/deb/rconnect*.deb ./rconnect.deb')
-                system2('dpkg-deb -R rconnect.deb tmpdeb')
-                system2('mkdir -p tmpdeb/usr/share/rconnect/files/systemd/')
+                    'mv target/release/bundle/deb/siskojaya*.deb ./siskojaya.deb')
+                system2('dpkg-deb -R siskojaya.deb tmpdeb')
+                system2('mkdir -p tmpdeb/usr/share/siskojaya/files/systemd/')
                 system2('mkdir -p tmpdeb/usr/share/icons/hicolor/256x256/apps/')
                 system2('mkdir -p tmpdeb/usr/share/icons/hicolor/scalable/apps/')
                 system2(
-                    'cp res/rconnect.service tmpdeb/usr/share/rconnect/files/systemd/')
+                    'cp res/siskojaya.service tmpdeb/usr/share/siskojaya/files/systemd/')
                 system2(
-                    'cp res/128x128@2x.png tmpdeb/usr/share/icons/hicolor/256x256/apps/rconnect.png')
+                    'cp res/128x128@2x.png tmpdeb/usr/share/icons/hicolor/256x256/apps/siskojaya.png')
                 system2(
-                    'cp res/scalable.svg tmpdeb/usr/share/icons/hicolor/scalable/apps/rconnect.svg')
+                    'cp res/scalable.svg tmpdeb/usr/share/icons/hicolor/scalable/apps/siskojaya.svg')
                 system2(
-                    'cp res/rconnect.desktop tmpdeb/usr/share/applications/rconnect.desktop')
+                    'cp res/siskojaya.desktop tmpdeb/usr/share/applications/siskojaya.desktop')
                 system2(
-                    'cp res/rconnect-link.desktop tmpdeb/usr/share/applications/rconnect-link.desktop')
-                os.system('mkdir -p tmpdeb/etc/rconnect/')
-                os.system('cp -a res/startwm.sh tmpdeb/etc/rconnect/')
-                os.system('mkdir -p tmpdeb/etc/X11/rconnect/')
-                os.system('cp res/xorg.conf tmpdeb/etc/X11/rconnect/')
+                    'cp res/siskojaya-link.desktop tmpdeb/usr/share/applications/siskojaya-link.desktop')
+                os.system('mkdir -p tmpdeb/etc/siskojaya/')
+                os.system('cp -a res/startwm.sh tmpdeb/etc/siskojaya/')
+                os.system('mkdir -p tmpdeb/etc/X11/siskojaya/')
+                os.system('cp res/xorg.conf tmpdeb/etc/X11/siskojaya/')
                 os.system('cp -a DEBIAN/* tmpdeb/DEBIAN/')
                 os.system('mkdir -p tmpdeb/etc/pam.d/')
-                os.system('cp pam.d/rconnect.debian tmpdeb/etc/pam.d/rconnect')
-                system2('strip tmpdeb/usr/bin/rconnect')
-                system2('mkdir -p tmpdeb/usr/share/rconnect')
-                system2('mv tmpdeb/usr/bin/rconnect tmpdeb/usr/share/rconnect/')
-                system2('cp libsciter-gtk.so tmpdeb/usr/share/rconnect/')
+                os.system('cp pam.d/siskojaya.debian tmpdeb/etc/pam.d/siskojaya')
+                system2('strip tmpdeb/usr/bin/siskojaya')
+                system2('mkdir -p tmpdeb/usr/share/siskojaya')
+                system2('mv tmpdeb/usr/bin/siskojaya tmpdeb/usr/share/siskojaya/')
+                system2('cp libsciter-gtk.so tmpdeb/usr/share/siskojaya/')
                 md5_file_folder("tmpdeb/")
-                system2('dpkg-deb -b tmpdeb rconnect.deb; /bin/rm -rf tmpdeb/')
-                os.rename('rconnect.deb', 'rconnect-%s.deb' % version)
+                system2('dpkg-deb -b tmpdeb siskojaya.deb; /bin/rm -rf tmpdeb/')
+                os.rename('siskojaya.deb', 'siskojaya-%s.deb' % version)
 
 
 def md5_file(fn):

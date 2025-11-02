@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/main.dart';
-import 'package:rconnect/common.dart';
+import 'package:siskojaya/main.dart';
+import 'package:siskojaya/common.dart';
 
 enum SystemWindowTheme { light, dark }
 

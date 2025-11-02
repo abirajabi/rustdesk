@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/desktop/widgets/tabbar_widget.dart';
-import 'package:rconnect/models/model.dart';
-import 'package:rconnect/models/terminal_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/desktop/widgets/tabbar_widget.dart';
+import 'package:siskojaya/models/model.dart';
+import 'package:siskojaya/models/terminal_model.dart';
 import 'package:xterm/xterm.dart';
 import 'terminal_connection_manager.dart';
 

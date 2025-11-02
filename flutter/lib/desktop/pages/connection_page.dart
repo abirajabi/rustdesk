@@ -5,14 +5,14 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:rconnect/common/widgets/connection_page_title.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/desktop/widgets/popup_menu.dart';
-import 'package:rconnect/models/state_model.dart';
+import 'package:siskojaya/common/widgets/connection_page_title.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/desktop/widgets/popup_menu.dart';
+import 'package:siskojaya/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:window_manager/window_manager.dart';
-import 'package:rconnect/models/peer_model.dart';
+import 'package:siskojaya/models/peer_model.dart';
 
 import '../../common.dart';
 import '../../common/formatter/id_formatter.dart';

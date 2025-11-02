@@ -1,4 +1,4 @@
-import 'package:rconnect/common.dart';
+import 'package:siskojaya/common.dart';
 import 'package:get/get.dart';
 
 import '../consts.dart';

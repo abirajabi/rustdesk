@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
+import 'package:siskojaya/common.dart';
 
 void showPeerSelectionDialog(
     {bool singleSelection = false,

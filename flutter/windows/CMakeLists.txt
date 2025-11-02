@@ -4,7 +4,7 @@ project(rustdesk LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "R-Connect")
+set(BINARY_NAME "SISKOJAYA")
 
 # Explicitly opt into modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
@@ -102,10 +102,10 @@ endif()
 
 
 # flutter_rust_bridge
-set(RCONNECT_LIB_BUILD_TYPE $<IF:$<CONFIG:Debug>,debug,release>)
-message(STATUS "rconnect lib build type: ${RCONNECT_LIB_BUILD_TYPE}")
-set(RCONNECT_LIB "../../target/${RCONNECT_LIB_BUILD_TYPE}/librustdesk.dll")
-install(FILES "${RCONNECT_LIB}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
+set(SISKOJAYA_LIB_BUILD_TYPE $<IF:$<CONFIG:Debug>,debug,release>)
+message(STATUS "siskojaya lib build type: ${SISKOJAYA_LIB_BUILD_TYPE}")
+set(SISKOJAYA_LIB "../../target/${SISKOJAYA_LIB_BUILD_TYPE}/librustdesk.dll")
+install(FILES "${SISKOJAYA_LIB}" DESTINATION "${INSTALL_BUNDLE_LIB_DIR}"
 COMPONENT Runtime RENAME librustdesk.dll)
 
 # Fully re-copy the assets directory on each build to avoid having stale files

@@ -1,6 +1,6 @@
 import 'dart:js' as js;
 // cycle imports, maybe we can improve this
-import 'package:rconnect/consts.dart';
+import 'package:siskojaya/consts.dart';
 
 final isAndroid_ = false;
 final isIOS_ = false;

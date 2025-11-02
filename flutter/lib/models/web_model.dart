@@ -7,11 +7,11 @@ import 'dart:html';
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:rconnect/common/widgets/login.dart';
-import 'package:rconnect/models/state_model.dart';
+import 'package:siskojaya/common/widgets/login.dart';
+import 'package:siskojaya/models/state_model.dart';
 
-import 'package:rconnect/web/bridge.dart';
-import 'package:rconnect/common.dart';
+import 'package:siskojaya/web/bridge.dart';
+import 'package:siskojaya/common.dart';
 import 'package:uuid/uuid.dart';
 
 final List<StreamSubscription<MouseEvent>> mouseListeners = [];

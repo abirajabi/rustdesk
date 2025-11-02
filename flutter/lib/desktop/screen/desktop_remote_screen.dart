@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/desktop/pages/remote_tab_page.dart';
-import 'package:rconnect/models/platform_model.dart';
-import 'package:rconnect/models/state_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/desktop/pages/remote_tab_page.dart';
+import 'package:siskojaya/models/platform_model.dart';
+import 'package:siskojaya/models/state_model.dart';
 import 'package:provider/provider.dart';
 
 /// multi-tab desktop remote screen

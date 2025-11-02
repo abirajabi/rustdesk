@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rconnect/mobile/pages/server_page.dart';
-import 'package:rconnect/mobile/pages/settings_page.dart';
-import 'package:rconnect/web/settings_page.dart';
+import 'package:siskojaya/mobile/pages/server_page.dart';
+import 'package:siskojaya/mobile/pages/settings_page.dart';
+import 'package:siskojaya/web/settings_page.dart';
 import 'package:get/get.dart';
 import '../../common.dart';
 import '../../common/widgets/chat_page.dart';

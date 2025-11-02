@@ -8,8 +8,8 @@ import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:rconnect/main.dart';
-import 'package:rconnect/utils/multi_window_manager.dart';
+import 'package:siskojaya/main.dart';
+import 'package:siskojaya/utils/multi_window_manager.dart';
 import 'package:get/get.dart';
 
 import '../../models/model.dart';

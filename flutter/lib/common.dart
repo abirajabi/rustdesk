@@ -8,14 +8,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:rconnect/common/formatter/id_formatter.dart';
-import 'package:rconnect/desktop/widgets/refresh_wrapper.dart';
-import 'package:rconnect/desktop/widgets/tabbar_widget.dart';
-import 'package:rconnect/main.dart';
-import 'package:rconnect/models/peer_model.dart';
-import 'package:rconnect/models/state_model.dart';
-import 'package:rconnect/utils/multi_window_manager.dart';
-import 'package:rconnect/utils/platform_channel.dart';
+import 'package:siskojaya/common/formatter/id_formatter.dart';
+import 'package:siskojaya/desktop/widgets/refresh_wrapper.dart';
+import 'package:siskojaya/desktop/widgets/tabbar_widget.dart';
+import 'package:siskojaya/main.dart';
+import 'package:siskojaya/models/peer_model.dart';
+import 'package:siskojaya/models/state_model.dart';
+import 'package:siskojaya/utils/multi_window_manager.dart';
+import 'package:siskojaya/utils/platform_channel.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -34,14 +34,14 @@ import 'mobile/pages/terminal_page.dart';
 import 'desktop/pages/remote_page.dart' as desktop_remote;
 import 'desktop/pages/file_manager_page.dart' as desktop_file_manager;
 import 'desktop/pages/view_camera_page.dart' as desktop_view_camera;
-import 'package:rconnect/desktop/widgets/remote_toolbar.dart';
+import 'package:siskojaya/desktop/widgets/remote_toolbar.dart';
 import 'models/model.dart';
 import 'models/platform_model.dart';
 
-import 'package:rconnect/native/win32.dart'
-    if (dart.library.html) 'package:rconnect/web/win32.dart';
-import 'package:rconnect/native/common.dart'
-    if (dart.library.html) 'package:rconnect/web/common.dart';
+import 'package:siskojaya/native/win32.dart'
+    if (dart.library.html) 'package:siskojaya/web/win32.dart';
+import 'package:siskojaya/native/common.dart'
+    if (dart.library.html) 'package:siskojaya/web/common.dart';
 import 'package:http/http.dart' as http;
 
 final globalKey = GlobalKey<NavigatorState>();

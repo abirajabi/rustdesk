@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:rconnect/common/formatter/id_formatter.dart';
-import 'package:rconnect/common/widgets/connection_page_title.dart';
-import 'package:rconnect/models/state_model.dart';
+import 'package:siskojaya/common/formatter/id_formatter.dart';
+import 'package:siskojaya/common/widgets/connection_page_title.dart';
+import 'package:siskojaya/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:rconnect/models/peer_model.dart';
+import 'package:siskojaya/models/peer_model.dart';
 
 import '../../common.dart';
 import '../../common/widgets/peer_tab_page.dart';

@@ -1,7 +1,7 @@
 import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/models/chat_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/models/chat_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 

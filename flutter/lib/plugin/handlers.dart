@@ -3,8 +3,8 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 import 'package:flutter/material.dart';
-import 'package:rconnect/plugin/ui_manager.dart';
-import 'package:rconnect/plugin/utils/dialogs.dart';
+import 'package:siskojaya/plugin/ui_manager.dart';
+import 'package:siskojaya/plugin/utils/dialogs.dart';
 
 abstract class NativeHandler {
   bool onEvent(Map<String, dynamic> evt);

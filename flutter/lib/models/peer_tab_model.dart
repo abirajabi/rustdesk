@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/models/peer_model.dart';
-import 'package:rconnect/models/platform_model.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/models/peer_model.dart';
+import 'package:siskojaya/models/platform_model.dart';
 import 'package:get/get.dart';
 
 import '../common.dart';

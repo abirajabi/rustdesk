@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:rconnect/common/hbbs/hbbs.dart';
-import 'package:rconnect/common/widgets/peers_view.dart';
-import 'package:rconnect/consts.dart';
-import 'package:rconnect/models/model.dart';
-import 'package:rconnect/models/peer_model.dart';
-import 'package:rconnect/models/platform_model.dart';
+import 'package:siskojaya/common/hbbs/hbbs.dart';
+import 'package:siskojaya/common/widgets/peers_view.dart';
+import 'package:siskojaya/consts.dart';
+import 'package:siskojaya/models/model.dart';
+import 'package:siskojaya/models/peer_model.dart';
+import 'package:siskojaya/models/platform_model.dart';
 import 'package:get/get.dart';
 import 'package:bot_toast/bot_toast.dart';
 

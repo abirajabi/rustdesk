@@ -4,7 +4,7 @@ version = "1.4.2"
 authors = ["rustdesk <info@rustdesk.com>"]
 edition = "2021"
 build= "build.rs"
-description = "R-connect Remote Desktop"
+description = "SISKOJAYA Remote Desktop"
 default-run = "rustdesk"
 rust-version = "1.75"
 
@@ -203,9 +203,9 @@ exclude = ["vdi/host", "examples/custom_plugin"]
 
 [package.metadata.winres]
 LegalCopyright = "Copyright © 2025 Purslane Ltd. All rights reserved."
-ProductName = "R-connect"
-FileDescription = "R-connect Remote Desktop"
-OriginalFilename = "R-connect.exe"
+ProductName = "SISKOJAYA"
+FileDescription = "SISKOJAYA Remote Desktop"
+OriginalFilename = "SISKOJAYA.exe"
 
 [target.'cfg(target_os="windows")'.build-dependencies]
 winres = "0.1"
@@ -221,7 +221,7 @@ hound = "3.5"
 docopt = "1.1"
 
 [package.metadata.bundle]
-name = "R-connect"
+name = "SISKOJAYA"
 identifier = "com.carriez.rustdesk"
 icon = ["res/32x32.png", "res/128x128.png", "res/128x128@2x.png"]
 osx_minimum_system_version = "10.14"

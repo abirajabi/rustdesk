@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/models/platform_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/models/platform_model.dart';
 
 const _kSystemSound = 'System Sound';
 

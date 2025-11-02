@@ -1,4 +1,4 @@
-package com.carriez.rconnect
+package com.carriez.siskojaya
 
 import android.app.Activity
 import android.content.Intent

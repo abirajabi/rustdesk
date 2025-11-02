@@ -2,13 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/common/widgets/dialog.dart';
-import 'package:rconnect/utils/event_loop.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/common/widgets/dialog.dart';
+import 'package:siskojaya/utils/event_loop.dart';
 import 'package:get/get.dart';
 import 'package:path/path.dart' as path;
-import 'package:rconnect/web/dummy.dart'
-    if (dart.library.html) 'package:rconnect/web/web_unique.dart';
+import 'package:siskojaya/web/dummy.dart'
+    if (dart.library.html) 'package:siskojaya/web/web_unique.dart';
 
 import '../consts.dart';
 import 'model.dart';

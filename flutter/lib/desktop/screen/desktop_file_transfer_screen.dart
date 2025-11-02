@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/desktop/pages/file_manager_tab_page.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/desktop/pages/file_manager_tab_page.dart';
 import 'package:provider/provider.dart';
 
 /// multi-tab file transfer remote screen

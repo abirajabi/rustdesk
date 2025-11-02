@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rconnect/common/formatter/id_formatter.dart';
+import 'package:siskojaya/common/formatter/id_formatter.dart';
 import '../../../models/platform_model.dart';
-import 'package:rconnect/models/peer_model.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/common/widgets/peer_card.dart';
+import 'package:siskojaya/models/peer_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/common/widgets/peer_card.dart';
 
 class AllPeersLoader {
   List<Peer> peers = [];

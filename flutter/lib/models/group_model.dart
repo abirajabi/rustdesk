@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
-import 'package:rconnect/common.dart';
-import 'package:rconnect/common/hbbs/hbbs.dart';
-import 'package:rconnect/common/widgets/peers_view.dart';
-import 'package:rconnect/models/model.dart';
-import 'package:rconnect/models/peer_model.dart';
-import 'package:rconnect/models/platform_model.dart';
+import 'package:siskojaya/common.dart';
+import 'package:siskojaya/common/hbbs/hbbs.dart';
+import 'package:siskojaya/common/widgets/peers_view.dart';
+import 'package:siskojaya/models/model.dart';
+import 'package:siskojaya/models/peer_model.dart';
+import 'package:siskojaya/models/platform_model.dart';
 import 'package:get/get.dart';
 import 'dart:convert';
 import '../utils/http_service.dart' as http;
