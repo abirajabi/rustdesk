@@ -812,7 +812,7 @@ class RustdeskImpl {
   }
 
   String mainGetAppNameSync({dynamic hint}) {
-    return 'R-connect';
+    return 'SISKOJAYA';
   }
 
   String mainUriPrefixSync({dynamic hint}) {
