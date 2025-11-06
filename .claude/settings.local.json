@@ -22,7 +22,11 @@
       "Bash(fvm use:*)",
       "Read(//c/Users/abina/AppData/Local/rustdesk/**)",
       "Bash(cargo build:*)",
-      "Bash(convert:*)"
+      "Bash(convert:*)",
+      "Bash(git submodule:*)",
+      "Bash(~/vcpkg/vcpkg list:*)",
+      "Bash(VCPKG_ROOT=/home/lingnaiyun/vcpkg python3:*)",
+      "Bash(sudo apt-get install:*)"
     ],
     "deny": [],
     "ask": []
