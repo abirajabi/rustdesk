@@ -31,7 +31,10 @@
       "Bash(python3:*)",
       "Bash(open:*)",
       "Bash(log show:*)",
-      "Bash(codesign:*)"
+      "Bash(codesign:*)",
+      "Bash(~/vcpkg/vcpkg list:*)",
+      "Bash(VCPKG_ROOT=/home/lingnaiyun/vcpkg python3:*)",
+      "Bash(sudo apt-get install:*)"
     ],
     "deny": [],
     "ask": []

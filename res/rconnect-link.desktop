@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=R-Connect
+NoDisplay=true
+MimeType=x-scheme-handler/rconnect;
+TryExec=rconnect
+Exec=rconnect %u
+Icon=rconnect
+Terminal=false
+Type=Application
+StartupNotify=false
+StartupWMClass=rconnect
