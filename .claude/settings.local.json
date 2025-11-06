@@ -22,7 +22,16 @@
       "Bash(fvm use:*)",
       "Read(//c/Users/abina/AppData/Local/rustdesk/**)",
       "Bash(cargo build:*)",
-      "Bash(convert:*)"
+      "Bash(convert:*)",
+      "Bash(git submodule:*)",
+      "Bash(rm:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(python3:*)",
+      "Bash(open:*)",
+      "Bash(log show:*)",
+      "Bash(codesign:*)"
     ],
     "deny": [],
     "ask": []
