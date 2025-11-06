@@ -13,6 +13,7 @@ src/version.rs
 *tgz
 cert.pfx
 *.bak
+!flutter/assets/*.png
 *png
 *svg
 *jpg

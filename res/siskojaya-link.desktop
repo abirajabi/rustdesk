@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Siskojaya
+NoDisplay=true
+MimeType=x-scheme-handler/siskojaya;
+TryExec=siskojaya
+Exec=siskojaya %u
+Icon=siskojaya
+Terminal=false
+Type=Application
+StartupNotify=false
+StartupWMClass=siskojaya

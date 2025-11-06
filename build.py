@@ -299,7 +299,7 @@ Version: %s
 Architecture: %s
 Maintainer: siskojaya <info@siskojaya.com>
 Homepage: https://siskojaya.com
-Depends: libgtk-3-0, libxcb-randr0, libxdo3, libxfixes3, libxcb-shape0, libxcb-xfixes0, libasound2, libsystemd0, curl, libva2, libva-drm2, libva-x11-2, libgstreamer-plugins-base1.0-0, libpam0g, gstreamer1.0-pipewire%s
+Depends: libgtk-3-0 | libgtk-3-0t64, libxcb-randr0, libxdo3, libxfixes3, libxcb-shape0, libxcb-xfixes0, libasound2 | libasound2t64, libsystemd0 | libsystemd0t64, curl, libva2, libva-drm2, libva-x11-2, libgstreamer-plugins-base1.0-0, libpam0g | libpam0t64, gstreamer1.0-pipewire%s
 Recommends: libayatana-appindicator3-1
 Description: A remote control software.
 
